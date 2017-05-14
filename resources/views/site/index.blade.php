@@ -107,9 +107,9 @@
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <a class="navbar-brand  hidden-md hidden-lg" href="http://www.joaopessoa.pb.gov.br">
+                <a class="navbar-brand  hidden-md hidden-lg" href="http://www.sertania.pe.gov.br">
 
-                    <img src="http://www.joaopessoa.pb.gov.br/portal/wp-content/themes/pmjp_2016%20eleicoes/assets/img/logo.png?x92016" alt="Site Logo" class="logo-brand">
+                    <img src="{!! asset('imagens/logoprefeitura.png') !!}" alt="Site Logo" style="max-height: 100px" class="logo-brand">
 
                 </a>
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -177,7 +177,7 @@
                     <ul class="nav nav-pills" style="padding-top: 25px;">
                         <li>  <div class="site-logo">
                                 <a href="http://www.joaopessoa.pb.gov.br">
-                                    <img src="{!! asset('imagens/logo.png') !!}" alt="Side Logo" style="padding-top: 10px; max-height: 150px;" data-pin-nopin="true">
+                                    <img src="{!! asset('imagens/logoprefeitura.png') !!}" alt="Side Logo" style="padding-top: 0px; max-height: 100px;" data-pin-nopin="true">
                                 </a>
                             </div></li>
                         <li><a class="cidadao" data-toggle="collapse" data-parent="#accordion-2" href="#cidadao" data-original-title="" title="">CIDADÃO</a></li>
