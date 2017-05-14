@@ -177,7 +177,7 @@
                     <ul class="nav nav-pills" style="padding-top: 25px;">
                         <li>  <div class="site-logo">
                                 <a href="http://www.joaopessoa.pb.gov.br">
-                                    <img src="{!! asset('imagens/logo.png') !!}" alt="Side Logo" style="padding-top: 10px; max-height: 77px;" data-pin-nopin="true">
+                                    <img src="{!! asset('imagens/logo.png') !!}" alt="Side Logo" style="padding-top: 10px; max-height: 150px;" data-pin-nopin="true">
                                 </a>
                             </div></li>
                         <li><a class="cidadao" data-toggle="collapse" data-parent="#accordion-2" href="#cidadao" data-original-title="" title="">CIDADÃO</a></li>
