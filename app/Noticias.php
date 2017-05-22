@@ -10,7 +10,7 @@ class Noticias extends Model
     use SoftDeletes;
 
     protected $table = "noticias";
-    protected $fillable = ['title','photo','legendphoto','creditophoto','visualizado','ativo','texto','sobre'];
+    protected $fillable = ['title','photo','legendphoto','creditophoto','visualizado','ativo','texto','sobre','categoria_id'];
 
 
     protected $dates = ['deleted_at','created_at','updated_at'];
@@ -30,6 +30,6 @@ class Noticias extends Model
      */
     public function categorias()
     {
-        return $this->belongsToMany('App\Categorias','noticia_categoria');
+        return $this->belongsTo('App\Categorias','categoria_id');
     }
 }

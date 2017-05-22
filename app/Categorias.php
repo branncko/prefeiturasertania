@@ -19,6 +19,6 @@ class Categorias extends Model
      */
     public function noticias()
     {
-        return $this->belongsToMany('App\Noticias','noticia_categoria');
+        return $this->hasMany('App\Noticias');
     }
 }

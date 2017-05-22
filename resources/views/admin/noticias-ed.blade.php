@@ -26,7 +26,7 @@
 
             <div class=" x_title">
 
-                    <h3>Cadastrar nova notícia</h3>
+                    <h3>Editando Notícia</h3>
                 <div class="clearfix"></div>
             </div>
             <div class="x_content">
@@ -39,12 +39,13 @@
                             @endforeach
                         </div>
                     @endif
-                    <form action="{!! route('noticia-salva') !!}" id="demo-form" data-parsley-validate class="form-horizontal " enctype="multipart/form-data" method="post">
+
+                        {!! Form::model($noticia, ['route' => ['noticia-update', $noticia->id],'id'=>'demo-form','data-parsley-validate','class'=>'form-horizontal','enctype'=>'multipart/form-data']) !!}
 {{ csrf_field()  }}
                         <div class="form-group">
                             <label class="control-label col-md-2 col-sm-2 col-xs-12">Título</label>
                             <div class="col-md-10 col-sm-10 col-xs-12">
-                                <input type="text" id="title" class="form-control" name="title" required  value="{!! old("titulo") !!}"/>
+                                {!! Form::text('title',old('title') ,['class'=>'form-control','required']) !!}
                             </div>
                         </div>
 
@@ -52,16 +53,16 @@
                         <div class="form-group">
                             <label class="control-label col-md-2 col-sm-2 col-xs-12">Categoria</label>
                             <div class="col-md-10 col-sm-10 col-xs-12">
-                                {!! Form::select('categoria', $categorias, old('categoria') , ['class'=> 'select2_single form-control']) !!}
 
+                                {!! Form::select('categoria', $categorias, $noticia->categoria_id, ['class'=> 'select2_single form-control']) !!}
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label class="control-label col-md-2 col-sm-2 col-xs-12">Sobre/Pequeno Texto</label>
                             <div class="col-md-10 col-sm-10 col-xs-12">
-                                 <textarea id="message" required="required" class="form-control" name="sobre" data-parsley-trigger="keyup" data-parsley-minlength="20" data-parsley-maxlength="100" data-parsley-minlength-message="Come on! You need to enter at least a 20 caracters long comment.."
-                                           data-parsley-validation-threshold="10">{!! old('sobre') !!}</textarea>
+
+                                {!! Form::textarea('sobre',old('sobre') ,['id'=>'message','rows'=>'3', 'class'=>'form-control', 'required','data-parsley-trigger'=>'keyup','data-parsley-minlength'=>'20','data-parsley-maxlength'=>'100','data-parsley-minlength-message'=>'Come on! You need to enter at least a 20 caracters long comment..','data-parsley-validation-threshold'=>'10']) !!}
 
                             </div>
                         </div>
@@ -70,7 +71,7 @@
                             <label class="control-label col-md-2 col-sm-2 col-xs-12">Foto Matéria</label>
                             <div class="col-md-10 col-sm-10 col-xs-12">
 
-                                <input type="file" id="photo" class="form-control" name="photo"  />
+                                <input type="file" id="photo" class="form-control" name="photo" />
 
                             </div>
                         </div>
@@ -78,13 +79,15 @@
                         <div class="form-group">
                             <label class="control-label col-md-2 col-sm-2 col-xs-12">Crédito Foto</label>
                             <div class="col-md-10 col-sm-10 col-xs-12">
-                                <input type="text" id="creditophoto" class="form-control" name="creditophoto"  value="{!! old("creditophoto") !!}" />
+                                {!! Form::text('creditophoto',old('creditophoto') ,['class'=>'form-control','']) !!}
+
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label col-md-2 col-sm-2 col-xs-12">Legenda Foto</label>
                             <div class="col-md-10 col-sm-10 col-xs-12">
-                                <input type="text" id="legendphoto" class="form-control" name="legendphoto" value="{!! old("legendphoto") !!}"  />
+                                {!! Form::text('legendphoto',old('legendphoto') ,['class'=>'form-control','']) !!}
+
                             </div>
                         </div>
 
@@ -93,7 +96,7 @@
                             <div class="col-md-10 col-sm-10 col-xs-12">
                                 <div class="">
                                     <label>
-                                        <input name="ativo" type="checkbox" class="js-switch" checked /> Sim?
+                                        <input name="ativo" value="1" type="checkbox" class="js-switch" @if($noticia->ativo) checked @endif /> Sim?
                                     </label>
                                 </div>
                             </div>
@@ -107,7 +110,8 @@
                         </label>
                         <div class="col-md-12 col-sm-12 col-xs-12">
                             <div>
-                                <textarea name="texto" id="editor" >{!! old("texto") !!}</textarea>
+                                {!! Form::textarea('texto',old('texto') ,['id'=>'editor']) !!}
+
                             </div>
                         </div>
                     </div>

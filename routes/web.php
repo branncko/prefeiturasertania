@@ -47,23 +47,28 @@ Route::group(['prefix' => 'admin'], function () {
         Route::post('/noticia/cadastro','NoticiasController@store')->name('noticia-salva');
         Route::get('/noticia/{id}','NoticiasController@show')->name('noticia-mostra');
         Route::post('/noticia/editar/{id}','NoticiasController@update')->name('noticia-update');
-        Route::post('/noticia/deleta/{id}','NoticiasController@destroy')->name('noticia-deleta');
+        Route::get('/noticia/deleta/{id}','NoticiasController@destroy')->name('noticia-deleta');
+
+        Route::post('/noticia/buscar','NoticiasController@find')->name('noticia-buscar');
+
+        Route::post('/noticia/imagem','NoticiasController@uploadImagemCorpo')->name('noticia-imagem-corpo');
 
 
 
         Route::get('/cateogoria/listar','CategoriasController@index')->name('categoria-lista');
+        Route::post('/cateogoria/buscar','CategoriasController@find')->name('categoria-buscar');
         Route::get('/categoria/cadastro','CategoriasController@create')->name('categoria-cadastro');
         Route::post('/categoria/cadastro','CategoriasController@store')->name('categoria-salva');
         Route::get('/categoria/{id}','CategoriasController@show')->name('categoria-mostra');
         Route::post('/categoria/editar/{id}','CategoriasController@update')->name('categoria-update');
-        Route::post('/categoria/deleta/{id}','CategoriasController@destroy')->name('categoria-deleta');
+        Route::get('/categoria/deleta/{id}','CategoriasController@destroy')->name('categoria-deleta');
 
         Route::get('/downloads/listar','DownloadsController@index')->name('downloads-lista');
         Route::get('/downloads/cadastro','DownloadsController@create')->name('downloads-cadastro');
         Route::post('/downloads/cadastro','DownloadsController@store')->name('downloads-salva');
         Route::get('/downloads/{id}','DownloadsController@show')->name('downloads-mostra');
         Route::post('/downloads/editar/{id}','DownloadsController@update')->name('downloads-update');
-        Route::post('/downloads/deleta/{id}','DownloadsController@destroy')->name('downloads-deleta');
+        Route::get('/downloads/deleta/{id}','DownloadsController@destroy')->name('downloads-deleta');
 
 
 
