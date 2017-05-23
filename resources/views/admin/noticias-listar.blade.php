@@ -54,7 +54,9 @@
                                 <th>
                                     <input type="checkbox" id="check-all" class="flat">
                                 </th>
-                                <th class="column-title">Título </th>
+
+                                <th class="column-title" colspan="2">Título </th>
+                                <th class="column-title">Categoria </th>
                                 <th class="column-title">Data Cadastrada</th>
 
                                 <th class="column-title">Editada em</th>
@@ -72,10 +74,14 @@
                             <tr class="even pointer @if(!$noticia->ativo) warning @endif">
                                 <td class="a-center ">
                                     <input type="checkbox" value="{!! $noticia->id !!}" class="flat" name="table_records">
-                                </td>
-                                <td class=" ">{!! $noticia->title !!}</td>
-                                <td class=" ">{!! $noticia->created_at !!}</td>
-                                <td class=" ">{!! $noticia->updated_at !!}</td>
+                                </td>@if($noticia->photo != null)
+                                <td class="col-md-1">
+                                    <img src="{!! route('arquivo-get',$noticia->id)!!}" alt="img" class="img-thumbnail img-responsive" />
+                                </td>@endif
+                                <td class=" "@if($noticia->photo == null)colspan="2"@endif>{!! $noticia->title !!}</td>
+                                <td class=" ">{!! $noticia->categorias->name !!}</td>
+                                <td class=" ">{!! $noticia->created_at->format('d/m/Y') !!}</td>
+                                <td class=" ">{!! $noticia->updated_at->format('d/m/Y')  !!}</td>
                                 <td class=" ">{!! $noticia->visualizado !!}</td>
 
 

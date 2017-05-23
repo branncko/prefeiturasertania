@@ -50,6 +50,12 @@
 
 
                         <div class="form-group">
+                            <label class="control-label col-md-2 col-sm-2 col-xs-12">Por</label>
+                            <div class="col-md-10 col-sm-10 col-xs-12">
+                                <input type="text" id="por" class="form-control" name="por"  value="{!! old("por") !!}" />
+                            </div>
+                        </div>
+                        <div class="form-group">
                             <label class="control-label col-md-2 col-sm-2 col-xs-12">Categoria</label>
                             <div class="col-md-10 col-sm-10 col-xs-12">
                                 {!! Form::select('categoria', $categorias, old('categoria') , ['class'=> 'select2_single form-control']) !!}
@@ -71,7 +77,7 @@
                             <div class="col-md-10 col-sm-10 col-xs-12">
 
                                 <input type="file" id="photo" class="form-control" name="photo"  />
-
+                                <small>Tamanho da foto: 760 x 400</small>
                             </div>
                         </div>
 
@@ -94,6 +100,18 @@
                                 <div class="">
                                     <label>
                                         <input name="ativo" type="checkbox" class="js-switch" checked /> Sim?
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label class="control-label col-md-2 col-sm-2 col-xs-12">Colocar em Destaque</label>
+                            <div class="col-md-10 col-sm-10 col-xs-12">
+                                <div class="">
+                                    <label>
+                                        <input name="carousel" type="checkbox" class="js-switch" checked /> Sim
                                     </label>
                                 </div>
                             </div>

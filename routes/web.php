@@ -11,18 +11,35 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'NoticiasHomeController@index')->name('home');
+Route::get('/index', 'NoticiasHomeController@index')->name('index');
+Route::get('/home', 'NoticiasHomeController@index')->name('home');
 
 
-Route::get('/index', function () {
-    return view('site.index');
-});
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/arquivo/get/{id}', 'FileController@getFile')->name('arquivo-get');
+Route::get('/arquivo/carousel/{id}', 'FileController@getFileCarousel')->name('arquivo-carousel');
+Route::get('/arquivo/chamadinhas/{id}', 'FileController@getFileChamadinhas')->name('arquivo-chamadinhas');
+
+Route::get('/noticias', 'NoticiasHomeController@noticiasLista')->name('noticias');
+Route::get('/noticia/{id}/{slug}', 'NoticiasHomeController@leitura')->name('noticias-ler');
+
+Route::get('/turista', function() {
+    return view('site.turismo');
+})->name('turista');
+
+Route::get('/empresa', function() {
+    return view('site.empresa');
+})->name('empresa');
+
+Route::get('/sic', function() {
+    return view('site.sic');
+})->name('sic');
+
 
 Route::group(['prefix' => 'admin'], function () {
     Route::get('/', 'AdminHomeController@index')->name('admin-home');

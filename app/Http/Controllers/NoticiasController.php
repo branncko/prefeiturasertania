@@ -72,12 +72,14 @@ class NoticiasController extends Controller
             return redirect()->back()->withErrors($validator)->withInput($request->all());
         };
 
+        $noticia = new Noticias;
 
         if (!empty($fotoprincipal)) {
             if ($fotoprincipal->isValid()) {
 
 //            $file->move($destinationPath,$file->getClientOriginalName());
-                $foto = $fotoprincipal->store('photo');
+                $foto = $fotoprincipal->store('public/photo');
+                $noticia->photo = $foto;
 
             } else {
                 return redirect()->back()->withErrors(["fotoprincipal"=>"Não é uma foto válida"]);
@@ -86,12 +88,13 @@ class NoticiasController extends Controller
 
 
 
-        $noticia = new Noticias;
         $noticia->fill($request->except(['photo']));
-        if (!$request->has("ativo")) $noticia->ativo = false;
+        if ($request->has("ativo")) {$noticia->ativo = true;}else{$noticia->ativo=false;}
+        if ($request->has("carousel")) {$noticia->carousel = true;}else{$noticia->carousel=false;}
+
+        $noticia->slug = str_slug($request->title,"-");
 
         $noticia->categoria_id = $request->input('categoria');
-        $noticia->photo = $foto;
         $noticia->save();
 
         Session::flash('sucesso', 'Notícia cadastrada com sucesso');
@@ -189,7 +192,9 @@ class NoticiasController extends Controller
         }
 
         if (!$request->has("ativo")) $noticia->ativo = false;
+        if ($request->has("carousel")) {$noticia->carousel = true;}else{$noticia->carousel=false;}
 
+        $noticia->slug = str_slug($request->title,"-");
         $noticia->categoria_id = $request->input('categoria');
         $noticia->save();
 

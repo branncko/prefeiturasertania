@@ -51,6 +51,13 @@
 
 
                         <div class="form-group">
+                            <label class="control-label col-md-2 col-sm-2 col-xs-12">Por</label>
+                            <div class="col-md-10 col-sm-10 col-xs-12">
+                                {!! Form::text('por',old('por') ,['class'=>'form-control','']) !!}
+
+                            </div>
+                        </div>
+                        <div class="form-group">
                             <label class="control-label col-md-2 col-sm-2 col-xs-12">Categoria</label>
                             <div class="col-md-10 col-sm-10 col-xs-12">
 
@@ -69,11 +76,16 @@
 
                         <div class="form-group">
                             <label class="control-label col-md-2 col-sm-2 col-xs-12">Foto Matéria</label>
-                            <div class="col-md-10 col-sm-10 col-xs-12">
+                            <span class="image col-md-2 pull-right">
+                                    <img src="{!! route('arquivo-get',$noticia->id)!!}" alt="img" class="img-thumbnail img-responsive" />
+                                </span>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
 
                                 <input type="file" id="photo" class="form-control" name="photo" />
+                                <small>Tamanho da foto: 760 x 400</small>
 
                             </div>
+
                         </div>
 
                         <div class="form-group">
@@ -97,6 +109,17 @@
                                 <div class="">
                                     <label>
                                         <input name="ativo" value="1" type="checkbox" class="js-switch" @if($noticia->ativo) checked @endif /> Sim?
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-2 col-sm-2 col-xs-12">Colocar como Destaque</label>
+                            <div class="col-md-10 col-sm-10 col-xs-12">
+                                <div class="">
+                                    <label>
+                                        <input name="carousel" value="1" type="checkbox" class="js-switch" @if($noticia->carousel) checked @endif /> Sim
                                     </label>
                                 </div>
                             </div>
