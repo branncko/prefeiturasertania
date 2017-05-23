@@ -25,6 +25,7 @@ Route::get('/arquivo/get/{id}', 'FileController@getFile')->name('arquivo-get');
 Route::get('/arquivo/carousel/{id}', 'FileController@getFileCarousel')->name('arquivo-carousel');
 Route::get('/arquivo/chamadinhas/{id}', 'FileController@getFileChamadinhas')->name('arquivo-chamadinhas');
 
+Route::post('/noticias/busca', 'NoticiasHomeController@noticiasBusca')->name('noticias-busca');
 Route::get('/noticias', 'NoticiasHomeController@noticiasLista')->name('noticias');
 Route::get('/noticia/{id}/{slug}', 'NoticiasHomeController@leitura')->name('noticias-ler');
 

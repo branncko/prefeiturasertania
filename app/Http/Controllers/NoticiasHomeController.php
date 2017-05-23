@@ -31,6 +31,18 @@ class NoticiasHomeController extends Controller
         return view('site.noticias', compact('noticias'));
 
     }
+    public function noticiasBusca(Request $request)
+    {
+        $noticias = Noticias::where('title','like','%'. $request->busca .'%' )->orderBy('id','desc')->paginate(20);
+
+        if (count($noticias) == 0) {
+            return redirect()->to(route("noticias"))->withErrors("Nenhum registro encontrado");
+
+        }
+
+        return view("site.noticias", compact("noticias"));
+
+    }
 
     public function leitura($id, $slug)
     {

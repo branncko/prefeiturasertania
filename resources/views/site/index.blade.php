@@ -137,9 +137,10 @@
 
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                            <form class="navbar-form navbar-right" role="search" method="get" action="http://www.joaopessoa.pb.gov.br/">
+                            <form class="navbar-form navbar-right" role="search" method="post" action="{!! route('noticias-busca') !!}">
+                                {!! csrf_field() !!}
                                 <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Pesquisar…" value="" name="s">
+                                    <input type="text" class="form-control" placeholder="Pesquisar…" value="" name="busca">
                                     <span class="input-group-btn">
                                             <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
                                         </span>

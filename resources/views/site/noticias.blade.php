@@ -7,6 +7,13 @@
 
 
         <div class="col-md-8 col-lg-8"  data-effect="slide-right">
+            @if($errors->any())
+                <div class="alert alert-danger">
+                    @foreach ($errors->all() as $error)
+                        <p>{{ $error }}</p>
+                    @endforeach
+                </div>
+            @endif
             <ul class="media-list">
                 @foreach($noticias as $noticiasMaisUni)
 
