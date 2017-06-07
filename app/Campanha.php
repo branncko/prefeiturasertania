@@ -5,14 +5,13 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Downloads extends Model
+class Campanha extends Model
 {
-    use SoftDeletes;
+     use SoftDeletes;
 
-    protected $table = 'downloads';
-    protected $fillable = ['title','arquivo','sobre','quantidade'];
+    protected $table = 'campanhas';
+    protected $fillable = ['titulo','imagem','link'];
 
 
     protected $dates = ['deleted_at','created_at','updated_at'];
-
 }

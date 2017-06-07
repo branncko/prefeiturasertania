@@ -98,24 +98,41 @@
                                     <li><a href="{!! route('noticia-lista') !!}">Listar Notícias</a></li>
                                 </ul>
                             </li>
-                            {{--<li><a><i class="fa fa-edit"></i> Banners <span class="fa fa-chevron-down"></span></a>
-                                <ul class="nav child_menu" style="display: none">
-                                    <li><a href="empty.html">Menu2.1</a>
-                                    </li>
-                                    <li><a href="empty.html">Meny2.2s</a>
-                                    </li>
-                                </ul>
-                            </li>--}}
-                            <li><a><i class="fa fa-edit"></i> Categorias <span class="fa fa-chevron-down"></span></a>
+
+                            <li><a><i class="fa fa-bookmark"></i> Categorias <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu" style="display: none">
                                     <li><a href="{!! route('categoria-cadastro') !!}">Criar</a></li>
                                     <li><a href="{!! route('categoria-lista') !!}">Listar</a></li>
                                 </ul>
                             </li>
-                            <li><a><i class="fa fa-edit"></i> Downloads <span class="fa fa-chevron-down"></span></a>
+                            <li><a><i class="fa fa-download"></i> Downloads <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu" style="display: none">
                                     <li><a href="{!! route('downloads-cadastro') !!}">Cadastrar</a></li>
                                     <li><a href="{!! route('downloads-lista') !!}">Listar</a></li>
+                                </ul>
+                            </li>
+                            <li><a><i class="fa fa-archive"></i> Campanhas <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu" style="display: none">
+                                    <li><a href="{!! route('campanha-cadastro') !!}">Cadastrar</a></li>
+                                    <li><a href="{!! route('campanha-lista') !!}">Listar</a></li>
+                                </ul>
+                            </li>
+                            <li><a><i class="fa fa-briefcase"></i> Orgãos <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu" style="display: none">
+                                    <li><a href="{!! route('orgaos-cadastro') !!}">Cadastrar</a></li>
+                                    <li><a href="{!! route('orgaos-lista') !!}">Listar</a></li>
+                                </ul>
+                            </li>
+                            <li><a><i class="fa fa-building"></i> Secretarias <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu" style="display: none">
+                                    <li><a href="{!! route('secretarias-cadastro') !!}">Cadastrar</a></li>
+                                    <li><a href="{!! route('secretarias-lista') !!}">Listar</a></li>
+                                </ul>
+                            </li>
+                            <li><a><i class="fa fa-youtube"></i> Vídeos <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu" style="display: none">
+                                    <li><a href="{!! route('videos-cadastro') !!}">Cadastrar</a></li>
+                                    <li><a href="{!! route('videos-lista') !!}">Listar</a></li>
                                 </ul>
                             </li>
                         </ul>

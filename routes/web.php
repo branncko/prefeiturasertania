@@ -82,11 +82,50 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/categoria/deleta/{id}','CategoriasController@destroy')->name('categoria-deleta');
 
         Route::get('/downloads/listar','DownloadsController@index')->name('downloads-lista');
-        Route::get('/downloads/cadastro','DownloadsController@create')->name('downloads-cadastro');
+    Route::post('/downloads/buscar','DownloadsController@find')->name('downloads-buscar');
+
+    Route::get('/downloads/cadastro','DownloadsController@create')->name('downloads-cadastro');
         Route::post('/downloads/cadastro','DownloadsController@store')->name('downloads-salva');
         Route::get('/downloads/{id}','DownloadsController@show')->name('downloads-mostra');
         Route::post('/downloads/editar/{id}','DownloadsController@update')->name('downloads-update');
         Route::get('/downloads/deleta/{id}','DownloadsController@destroy')->name('downloads-deleta');
+
+
+        Route::get('/campanhas/listar','CampanhaController@index')->name('campanha-lista');
+    Route::post('/campanhas/buscar','CampanhaController@find')->name('campanha-buscar');
+
+    Route::get('/campanhas/cadastro','CampanhaController@create')->name('campanha-cadastro');
+        Route::post('/campanhas/cadastro','CampanhaController@store')->name('campanha-salva');
+        Route::get('/campanhas/{id}','CampanhaController@show')->name('campanha-mostra');
+        Route::post('/campanhas/editar/{id}','CampanhaController@update')->name('campanha-update');
+        Route::get('/campanhas/deleta/{id}','CampanhaController@destroy')->name('campanha-deleta');
+
+
+
+        Route::get('/orgaos/listar','OrgaosController@index')->name('orgaos-lista');
+        Route::get('/orgaos/cadastro','OrgaosController@create')->name('orgaos-cadastro');
+        Route::post('/orgaos/cadastro','OrgaosController@store')->name('orgaos-salva');
+        Route::get('/orgaos/{id}','OrgaosController@show')->name('orgaos-mostra');
+        Route::post('/orgaos/editar/{id}','OrgaosController@update')->name('orgaos-update');
+        Route::get('/orgaos/deleta/{id}','OrgaosController@destroy')->name('orgaos-deleta');
+
+
+
+        Route::get('/secretarias/listar','SecretariasController@index')->name('secretarias-lista');
+        Route::get('/secretarias/cadastro','SecretariasController@create')->name('secretarias-cadastro');
+        Route::post('/secretarias/cadastro','SecretariasController@store')->name('secretarias-salva');
+        Route::get('/secretarias/{id}','SecretariasController@show')->name('secretarias-mostra');
+        Route::post('/secretarias/editar/{id}','SecretariasController@update')->name('secretarias-update');
+        Route::get('/secretarias/deleta/{id}','SecretariasController@destroy')->name('secretarias-deleta');
+
+
+
+        Route::get('/videos/listar','VideosController@index')->name('videos-lista');
+        Route::get('/videos/cadastro','VideosController@create')->name('videos-cadastro');
+        Route::post('/videos/cadastro','VideosController@store')->name('videos-salva');
+        Route::get('/videos/{id}','VideosController@show')->name('videos-mostra');
+        Route::post('/videos/editar/{id}','VideosController@update')->name('videos-update');
+        Route::get('/videos/deleta/{id}','VideosController@destroy')->name('videos-deleta');
 
 
 

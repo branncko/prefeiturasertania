@@ -4,7 +4,7 @@
 
     <div class="page-title">
         <div class="title_left">
-            <h3>Categorias </h3>
+            <h3>Orgãos </h3>
         </div>
 
         {{--<div class="title_right">--}}
@@ -26,7 +26,7 @@
 
             <div class=" x_title">
 
-                    <h3>Editar categoria</h3>
+                    <h3>Editar orgão</h3>
                 <div class="clearfix"></div>
             </div>
             <div class="x_content">
@@ -39,17 +39,29 @@
                             @endforeach
                         </div>
                     @endif
-                        {!! Form::model($categoria, ['route' => ['categoria-update', $categoria->id],'id'=>'demo-form','data-parsley-validate','class'=>'form-horizontal','enctype'=>'multipart/form-data']) !!}
+                        {!! Form::model($orgao, ['route' => ['orgaos-update', $orgao->id],'id'=>'demo-form','data-parsley-validate','class'=>'form-horizontal','enctype'=>'multipart/form-data']) !!}
 
                         {{ csrf_field()  }}
                         <div class="form-group">
                             <label class="control-label col-md-2 col-sm-2 col-xs-12">Nome</label>
                             <div class="col-md-10 col-sm-10 col-xs-12">
-                                {!! Form::text('name',old('name') ,['class'=>'form-control','required']) !!}
+                                {!! Form::text('titulo',old('titulo') ,['class'=>'form-control','required']) !!}
 
                             </div>
                         </div>
 
+                        <div class="form-group">
+                            <label for="" class="control-label col-md-2 col-sm-2 col-xs-12">
+                                Escreva sobre o orgão
+                            </label>
+                            <div class="col-md-10 col-sm-10 col-xs-12">
+                                <div>
+
+                                    {!! Form::textarea('sobre',old('sobre') ,['id'=>'editor','rows'=>'3', 'class'=>'form-control']) !!}
+
+                                </div>
+                            </div>
+                        </div>
 
                         <div class="form-group">
                             <label class="control-label col-md-2 col-sm-2 col-xs-12"> </label>
@@ -79,7 +91,7 @@
 
             $(".select2_single").select2({
 
-                placeholder: "Máximo de 1 categoria",
+                placeholder: "Máximo de 1 orgão",
                 allowClear: true
             });
 

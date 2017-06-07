@@ -4,7 +4,7 @@
 
     <div class="page-title">
         <div class="title_left">
-            <h3>Notícias </h3>
+            <h3>Categorias </h3>
         </div>
 
         {{--<div class="title_right">--}}
@@ -26,7 +26,7 @@
 
             <div class=" x_title">
 
-                    <h3>Cadastrar nova notícia</h3>
+                    <h3>Cadastrar nova Categoria</h3>
                 <div class="clearfix"></div>
             </div>
             <div class="x_content">

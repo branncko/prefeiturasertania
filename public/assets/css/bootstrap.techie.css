@@ -287,7 +287,7 @@ body {
   line-height: 1.6em;
   color: #818181;
   background-color: #ffffff;
-  font-weight: 300;
+  font-weight: 600;
 }
 input,
 button,
@@ -299,12 +299,12 @@ textarea {
   font-weight: 300;
 }
 a {
-  color: #082811;
+  color: #000000;
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #082811;
+  color: #7e0f13;
   text-decoration: underline;
 }
 a:focus {
@@ -3085,7 +3085,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav > li > a:hover,
 .nav > li > a:focus {
   text-decoration: none;
-  color: #082811;
+  color: #7e0f13;
 }
 .nav > li.disabled > a {
   color: #777777;

@@ -14,7 +14,6 @@
             <li><a href="#">Editais e Licitações</a></li>
             <li class="divider"></li>
             <li><a href="#"><i class="fa fa-youtube"></i> Canal do Youtube</a></li>
-            <li><a href="#"><i class="fa fa-instagram"></i> Perfil de Instagram</a></li>
             <li><a href="#"><i class="fa fa-facebook"></i> Perfil do Facebook</a></li>
         </ul>
     </div>

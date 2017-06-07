@@ -4,19 +4,9 @@
 
     <div class="page-title">
         <div class="title_left">
-            <h3>Categorias </h3>
+            <h3>Downloads </h3>
         </div>
 
-        {{--<div class="title_right">--}}
-            {{--<div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">--}}
-                {{--<div class="input-group">--}}
-                    {{--<input type="text" class="form-control" placeholder="Search for...">--}}
-                    {{--<span class="input-group-btn">--}}
-                            {{--<button class="btn btn-default" type="button">Go!</button>--}}
-                        {{--</span>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
     </div>
     <div class="clearfix"></div>
 
@@ -26,7 +16,7 @@
 
             <div class=" x_title">
 
-                    <h3>Editar categoria</h3>
+                    <h3>Cadastrar novo arquivo</h3>
                 <div class="clearfix"></div>
             </div>
             <div class="x_content">
@@ -39,17 +29,33 @@
                             @endforeach
                         </div>
                     @endif
-                        {!! Form::model($categoria, ['route' => ['categoria-update', $categoria->id],'id'=>'demo-form','data-parsley-validate','class'=>'form-horizontal','enctype'=>'multipart/form-data']) !!}
-
-                        {{ csrf_field()  }}
+                    <form action="{!! route('downloads-salva') !!}" id="demo-form" data-parsley-validate class="form-horizontal " enctype="multipart/form-data" method="post">
+{{ csrf_field()  }}
                         <div class="form-group">
                             <label class="control-label col-md-2 col-sm-2 col-xs-12">Nome</label>
                             <div class="col-md-10 col-sm-10 col-xs-12">
-                                {!! Form::text('name',old('name') ,['class'=>'form-control','required']) !!}
-
+                                <input type="text" id="title" class="form-control" name="title" required  value="{!! old("title") !!}"/>
                             </div>
                         </div>
 
+
+                        <div class="form-group">
+                            <label class="control-label col-md-2 col-sm-2 col-xs-12">Arquivo</label>
+                            <div class="col-md-10 col-sm-10 col-xs-12">
+
+                                <input type="file" id="arquivo" class="form-control" name="arquivo" required />
+                                <small>Selecione o arquivo acima</small>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-2 col-sm-2 col-xs-12">Sobre/Pequeno Texto</label>
+                            <div class="col-md-10 col-sm-10 col-xs-12">
+                                 <textarea id="message" required="required" class="form-control" name="sobre" data-parsley-trigger="keyup" data-parsley-minlength="20" data-parsley-maxlength="100" data-parsley-minlength-message="Come on! You need to enter at least a 20 caracters long comment.."
+                                           data-parsley-validation-threshold="10">{!! old('sobre') !!}</textarea>
+
+                            </div>
+                        </div>
 
                         <div class="form-group">
                             <label class="control-label col-md-2 col-sm-2 col-xs-12"> </label>
@@ -77,8 +83,8 @@
     <script>
         $(document).ready(function() {
 
-            $(".select2_single").select2({
-
+            $(".select2_multiple").select2({
+                maximumSelectionLength: 1,
                 placeholder: "Máximo de 1 categoria",
                 allowClear: true
             });
