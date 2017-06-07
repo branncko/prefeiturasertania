@@ -65,7 +65,7 @@ class SecretariasController extends Controller
         };
 
 
-        $orgao = Secretarias::create($request->all());
+        $secretaria = Secretarias::create($request->all());
 
 
         Session::flash('sucesso', 'Orgão cadastrada com sucesso');
@@ -82,13 +82,13 @@ class SecretariasController extends Controller
     public function show($id)
     {
 
-        $orgao = Secretarias::find($id);
-        if ($orgao == null) {
+        $secretaria = Secretarias::find($id);
+        if ($secretaria == null) {
             return redirect(route("secretarias-lista"))->withErrors("Orgão não existente");
 
         }
 
-        return view("admin.secretarias-ed", compact("orgao"));
+        return view("admin.secretarias-ed", compact("secretaria"));
 
     }
 
@@ -100,12 +100,12 @@ class SecretariasController extends Controller
      */
     public function edit($id)
     {
-        $orgao = Secretarias::find($id);
-        if ($orgao == null) {
+        $secretaria = Secretarias::find($id);
+        if ($secretaria == null) {
             return redirect(route("secretarias-lista"))->withErrors("Orgão não existente");
 
         }
-        return view("admin.secretarias-ed", compact("$orgao"));
+        return view("admin.secretarias-ed", compact("$secretaria"));
 
 
 
@@ -120,8 +120,8 @@ class SecretariasController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $orgao = Secretarias::find($id);
-        if ($orgao == null) {
+        $secretaria = Secretarias::find($id);
+        if ($secretaria == null) {
             return redirect(route("secretarias-lista"))->withErrors("Orgão não existente");
 
         }
@@ -145,8 +145,8 @@ class SecretariasController extends Controller
         };
 
 
-        $orgao->fill($request->all());
-        $orgao->save();
+        $secretaria->fill($request->all());
+        $secretaria->save();
 
         Session::flash('sucesso', 'Orgão modificado com sucesso');
 
@@ -163,14 +163,14 @@ class SecretariasController extends Controller
      */
     public function destroy($id)
     {
-        $orgao = Secretarias::find($id);
+        $secretaria = Secretarias::find($id);
 
-        if ($orgao == null) {
+        if ($secretaria == null) {
             return redirect(route("noticia-lista"))->withErrors("Notícia não existente");
 
         }
 
-        $r = $orgao->delete();
+        $r = $secretaria->delete();
 
         if ($r) {
             Session::flash('sucesso', 'Orgão excluído com sucesso');
