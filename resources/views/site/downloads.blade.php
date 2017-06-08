@@ -7,8 +7,10 @@
             <!-- Slider -->
             <div class="col-sm-12 col-lg-12">
                 <div class="well">
-
-
+    <h3><strong>Downloads</strong></h3>
+                    <div class="divider-dashed">
+                        <hr>
+                    </div>
                     <div class="list-group">
                         @foreach($downloads as $download)
                             <a href="{!! route('downloads-one', $download->id) !!}" target="_blank" class="list-group-item">
