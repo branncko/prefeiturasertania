@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Campanha;
 use Illuminate\Http\Request;
 use App\Categorias;
 
@@ -21,7 +22,7 @@ class NoticiasHomeController extends Controller
     {
         $noticiasCarousel = Noticias::where('ativo', 1)->where('carousel', 1)->orderBy('id', 'desc')->take(3)->get();
         $noticiasMais = Noticias::where('ativo', 1)->where('carousel', 0)->orderBy('id', 'desc')->get();
-        $campanhas = Noticias::all();
+        $campanhas = Campanha::all();
         return view('site.home', compact('noticiasCarousel'), compact('noticiasMais'),compact('campanhas'));
 
     }
