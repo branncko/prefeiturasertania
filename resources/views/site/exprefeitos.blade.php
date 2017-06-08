@@ -60,7 +60,10 @@
                             37  Ângelo Rafael Ferreira dos Santos<br>
                             38  Ângelo Rafael Ferreira dos Santos<br>
                             39  José Ivan de Lima<br>
-                            40 – Cleide Ferreira</i></p>
+                            40 Lucicleide Xavier Ferreira dos Santos<br>
+                            41 Gustavo Lins de Albuquerque<br>
+                            42 Ângelo Rafael Ferreira dos Santos<br>
+                        </i></p>
 
                 </div>
             </div>

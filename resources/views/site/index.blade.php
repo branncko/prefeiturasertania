@@ -144,7 +144,7 @@
             </ul>
         </div><!--  /.cocial-icons -->
         <div class="copyright">
-            <strong>PREFEITURA MUNICIPAL DE SERTÂNIA</strong><br/>
+            <strong>GOVERNO MUNICIPAL DE SERTÂNIA</strong><br/>
             Praça João Pereira Vale, 20, Centro – Sertânia-PE.
 
         </div> <!-- /.copyright -->

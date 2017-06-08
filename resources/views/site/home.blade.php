@@ -33,7 +33,7 @@
                         <ul class="list-group col-sm-4">
                             <?php $ic=0; ?>
                             @foreach($noticiasCarousel as $noticiacarousel)
-                                <li data-target="#myCarousel" data-slide-to="{!! $ic !!}" class="list-group-item active">
+                                <li data-target="#myCarousel" data-slide-to="{!! $ic !!}" class="list-group-item @if($ic==0) active @endif">
                                     <h5 class="media-heading">{!! $noticiacarousel->categorias->name !!}</h5>
                                     <h4>{!! $noticiacarousel->title !!}</h4>
                                 </li>
@@ -79,6 +79,20 @@
                     </li>
                 @endforeach
             </ul>
+        </div>
+
+
+        <div class="col-md-8 col-lg-8"  data-effect="slide-right">
+            @foreach($campanhas as $campanha)
+
+                <div class="col-lg-6 col-sm-6 ">
+                    <a href="@if($campanha->link != null) {!! $campanha->link !!} @else # @endif" class="thumbnail">
+
+                        <img src="{!! route('arquivo-campanha', $campanha->id) !!}" alt="">
+
+                    </a>
+                </div>
+            @endforeach
         </div>
 
         {{--Lateral--}}

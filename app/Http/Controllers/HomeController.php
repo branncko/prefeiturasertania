@@ -40,4 +40,8 @@ class HomeController extends Controller
         return view('site.exprefeitos');
     }
 
+    public function simbolos() {
+        return view('site.simbolos');
+    }
+
 }

@@ -88,7 +88,7 @@ class DownloadsController extends Controller
         $download->quantidade = 0;
         $download->save();
 
-        Session::flash('sucesso', 'Download cadastradp com sucesso');
+        Session::flash('sucesso', 'Download cadastrado com sucesso');
 
         return redirect()->to(route("downloads-lista"));
     }

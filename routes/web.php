@@ -24,6 +24,7 @@ Auth::routes();
 Route::get('/arquivo/get/{id}', 'FileController@getFile')->name('arquivo-get');
 Route::get('/arquivo/carousel/{id}', 'FileController@getFileCarousel')->name('arquivo-carousel');
 Route::get('/arquivo/chamadinhas/{id}', 'FileController@getFileChamadinhas')->name('arquivo-chamadinhas');
+Route::get('/campanha/{id}', 'CampanhaController@mostraCampanha')->name('arquivo-campanha');
 
 Route::post('/noticias/busca', 'NoticiasHomeController@noticiasBusca')->name('noticias-busca');
 Route::get('/noticias', 'NoticiasHomeController@noticiasLista')->name('noticias');
@@ -34,6 +35,7 @@ Route::get('/cidade', 'HomeController@cidade')->name('cidade');
 Route::get('/dados', 'HomeController@dados')->name('dados');
 Route::get('/hino', 'HomeController@hino')->name('hino');
 Route::get('/exprefeitos', 'HomeController@exprefeitos')->name('exprefeitos');
+Route::get('/simbolos', 'HomeController@simbolos')->name('simbolos');
 
 Route::get('/secretarias', 'SecretariasController@home')->name('secretarias');
 Route::get('/secretarias/{id}', 'SecretariasController@homeOne')->name('secretarias-one');
@@ -95,9 +97,9 @@ Route::group(['prefix' => 'admin'], function () {
 
 
         Route::get('/campanhas/listar','CampanhaController@index')->name('campanha-lista');
-    Route::post('/campanhas/buscar','CampanhaController@find')->name('campanha-buscar');
+        Route::post('/campanhas/buscar','CampanhaController@find')->name('campanha-buscar');
 
-    Route::get('/campanhas/cadastro','CampanhaController@create')->name('campanha-cadastro');
+        Route::get('/campanhas/cadastro','CampanhaController@create')->name('campanha-cadastro');
         Route::post('/campanhas/cadastro','CampanhaController@store')->name('campanha-salva');
         Route::get('/campanhas/{id}','CampanhaController@show')->name('campanha-mostra');
         Route::post('/campanhas/editar/{id}','CampanhaController@update')->name('campanha-update');

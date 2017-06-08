@@ -19,9 +19,10 @@ class NoticiasHomeController extends Controller
      */
     public function index()
     {
-        $noticiasCarousel = Noticias::where('ativo', 1)->where('carousel', 1)->orderBy('id', 'desc')->take(5)->get();
+        $noticiasCarousel = Noticias::where('ativo', 1)->where('carousel', 1)->orderBy('id', 'desc')->take(3)->get();
         $noticiasMais = Noticias::where('ativo', 1)->where('carousel', 0)->orderBy('id', 'desc')->get();
-        return view('site.home', compact('noticiasCarousel'), compact('noticiasMais'));
+        $campanhas = Noticias::all();
+        return view('site.home', compact('noticiasCarousel'), compact('noticiasMais'),compact('campanhas'));
 
     }
 
