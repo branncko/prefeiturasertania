@@ -14,7 +14,7 @@ class DownloadsController extends Controller
 {
     
     public function __construct() {
-        $this->middleware('admin.user')->except('home');
+        $this->middleware('admin.user')->except('home','homeOne','getFile');
 
     }
 
