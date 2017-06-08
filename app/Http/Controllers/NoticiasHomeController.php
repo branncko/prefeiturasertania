@@ -22,8 +22,10 @@ class NoticiasHomeController extends Controller
     {
         $noticiasCarousel = Noticias::where('ativo', 1)->where('carousel', 1)->orderBy('id', 'desc')->take(3)->get();
         $noticiasMais = Noticias::where('ativo', 1)->where('carousel', 0)->orderBy('id', 'desc')->get();
-        $campanhas = Campanha::all();
-        return view('site.home', compact('noticiasCarousel'), compact('noticiasMais'),compact('campanhas'));
+        $publicidades = Campanha::all();
+
+
+        return view('site.home', compact('noticiasCarousel'), compact('noticiasMais','publicidades'));
 
     }
 

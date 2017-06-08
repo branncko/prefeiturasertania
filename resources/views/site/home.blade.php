@@ -82,11 +82,11 @@
         </div>
 
 
-        <div class="col-md-8 col-lg-8"  data-effect="slide-right">
-            @foreach($campanhas as $campanha)
+        <div class="col-md-8 col-lg-8"  data-effect="slide-right" style="margin-top: 30px;">
+            @foreach($publicidades as $campanha)
 
                 <div class="col-lg-6 col-sm-6 ">
-                    <a href="@if($campanha->link != null) {!! $campanha->link !!} @else # @endif" class="thumbnail">
+                    <a href="@if($campanha->link != null) {!! $campanha->link !!} @else javascript:void(0); @endif" class="thumbnail">
 
                         <img src="{!! route('arquivo-campanha', $campanha->id) !!}" alt="">
 
