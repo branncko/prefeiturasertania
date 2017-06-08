@@ -13,8 +13,8 @@
             <li><a href="#">Site Câmara de Vereadores</a></li>
             <li><a href="#">Editais e Licitações</a></li>
             <li class="divider"></li>
-            <li><a href="#"><i class="fa fa-youtube"></i> Canal do Youtube</a></li>
-            <li><a href="#"><i class="fa fa-facebook"></i> Perfil do Facebook</a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i> Nosso Twitter</a></li>
+            <li><a href="https://www.facebook.com/PrefeituradeSertaniaGovernoMunicipal/"><i class="fa fa-facebook"></i> Perfil do Facebook</a></li>
         </ul>
     </div>
 </div>
