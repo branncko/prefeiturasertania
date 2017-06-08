@@ -273,6 +273,9 @@ class DownloadsController extends Controller
 
         $download = Downloads::find($id);
 
+        $download->quantidade = $download->quantidade+1;
+        $download->save();
+
         return response()->download(storage_path('app/'.$download->arquivo));
     }
 }
