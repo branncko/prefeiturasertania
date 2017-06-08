@@ -77,12 +77,11 @@
                         <ul class="nav side-menu">
                             <li ><a><i class="fa fa-home"></i> Usuários <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu" style="display: none">
-                                    <li><a href="{!! route('admin-register') !!}">Adicionar Novos</a>
-                                    </li>
+                                    {{--<li><a href="{!! route('admin-register') !!}">Adicionar Novos</a>--}}
+                                    {{--</li>--}}
                                     <li><a href="{!! route('admin-lista') !!}">Lista de Usuários</a>
                                     </li>
-                                    <li><a href="{!! route('admin-lista-inativos') !!}">Usuários Inativos</a>
-                                    </li>
+
                                 </ul>
                             </li>
 

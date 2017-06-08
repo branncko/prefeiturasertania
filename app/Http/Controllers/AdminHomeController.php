@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\AdminUser;
 use Illuminate\Http\Request;
 
 class AdminHomeController extends Controller
@@ -18,7 +19,9 @@ class AdminHomeController extends Controller
     }
     public function listar()
     {
-        return "Lista de Adm";
+        $admins  =  AdminUser::orderBy('id','desc')->paginate(20);
+
+        return view('admin.admin-listar', compact('admins'));
     }
     public function listarInativos()
     {

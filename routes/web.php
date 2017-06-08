@@ -49,7 +49,8 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/home', 'AdminHomeController@index')->name('admin-home');
 
     Route::get('/lista','AdminHomeController@listar')->name('admin-lista');
-    Route::get('/lista/inativos','AdminHomeController@listarInativos')->name('admin-lista-inativos');
+
+    //    Route::get('/lista/inativos','AdminHomeController@listarInativos')->name('admin-lista-inativos');
 
     Route::get('/login','AdminAuth\LoginController@showLoginForm')->name('admin-login');
     Route::post('/login','AdminAuth\LoginController@login')->name('admin-login-post');
