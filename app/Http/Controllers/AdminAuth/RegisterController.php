@@ -27,7 +27,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/admin/home';
 
     /**
      * Create a new controller instance.
@@ -38,6 +38,17 @@ class RegisterController extends Controller
     {
         $this->middleware('guest');
     }
+
+    /**
+     * Show the application registration form.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function showRegistrationForm()
+    {
+        return view('admin-auth.register');
+    }
+
 
     /**
      * Get a validator for an incoming registration request.
