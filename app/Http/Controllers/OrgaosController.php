@@ -10,7 +10,7 @@ use Validator;
 class OrgaosController extends Controller
 {
     public function __construct() {
-        $this->middleware('admin.user');
+        $this->middleware('admin.user')->except('home');
 
     }
 
@@ -204,4 +204,25 @@ class OrgaosController extends Controller
         return view("admin.orgaos-listar", compact("orgaos"));
 
     }
+
+
+
+    public function home() {
+
+        $orgaos = Orgaos::all();
+
+        $orgaosPrimeira = Orgaos::where('deleted_at', null)->first();
+
+        return view('site.orgaos', compact('orgaos', 'orgaosPrimeira'));
+    }
+
+    public function homeOne($id) {
+
+        $orgaos = Orgaos::all();
+
+        $orgaosPrimeira = Orgaos::find($id);
+
+        return view('site.orgaos', compact('orgaos', 'orgaosPrimeira'));
+    }
+
 }

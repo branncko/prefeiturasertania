@@ -6,12 +6,15 @@ use App\Downloads;
 use Illuminate\Http\Request;
 use Session;
 use Validator;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Http\Response;
+
 
 class DownloadsController extends Controller
 {
     
     public function __construct() {
-        $this->middleware('admin.user');
+        $this->middleware('admin.user')->except('home');
 
     }
 
@@ -239,5 +242,37 @@ class DownloadsController extends Controller
 
         return view("admin.downloads-listar", compact("downloads"));
 
+    }
+
+
+
+
+
+
+
+    public function home() {
+
+        $downloads = Downloads::all();
+
+        $downloadsPrimeira = Downloads::where('deleted_at', null)->first();
+
+        return view('site.downloads', compact('downloads', 'downloadsPrimeira'));
+    }
+
+    public function homeOne($id) {
+
+        $downloads = Downloads::all();
+
+        $downloadsPrimeira = Downloads::find($id);
+
+        return view('site.downloads', compact('downloads', 'downloadsPrimeira'));
+    }
+
+
+    public function getFile($id) {
+
+        $download = Downloads::find($id);
+
+        return response()->download(storage_path('app/'.$download->arquivo));
     }
 }

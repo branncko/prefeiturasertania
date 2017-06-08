@@ -8,20 +8,26 @@
 
 @endsection
 @section('content_index')
-    <div class="container">
+    <div class="container noticias">
 
         <div class="row">
             <!-- Slider -->
             <div class="col-sm-8 col-lg-8">
                 <div class="well">
 
-                        <h3>{!! $noticia->title !!}</h3>
+                        <h2>{!! $noticia->title !!}</h2>
                     <div class="article-like-comment-date">
                         Por {!! $noticia->por !!} - em <time datetime="{!! $noticia->updated_at->format('d/m/Y') !!}">{!! $noticia->updated_at->format('d/m/Y') !!}</time>
                         <a href="javascript:print();" title="Imprimir" class="hidden-xs btn btn-default btn-xs"><i class="fa fa-print"></i></a>
                         <a href="whatsapp://send?text={!! $noticia->title !!} {!! route('noticias-ler',[$noticia->id,$noticia->slug]) !!}" data-action="share/whatsapp/share" class="btn btn-success btn-xs"><i class="fa fa-whatsapp"></i></a>
-                        <div class="fb-share-button" data-href="http://localhost/prefeiturasertania/public/noticia/10/maciel-melo-e-xangai-se-apresentam-durante-semana-cultural-em-sertania" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={!! route('noticias-ler',[$noticia->id,$noticia->slug]) !!}&amp;src=sdkpreparse">Compartilhar</a></div>
-                        <div class="fb-send" data-href="{!! route('noticias-ler',[$noticia->id,$noticia->slug]) !!}"></div>
+
+
+                        <div class="fb-share-button"
+                             data-href="{!! route('noticias-ler',[$noticia->id,$noticia->slug]) !!}"
+                             data-layout="button_count">
+                        </div>
+
+
                     </div>
                     <div class="divider-dashed">
                         <hr>

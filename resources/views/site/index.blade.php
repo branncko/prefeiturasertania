@@ -20,93 +20,13 @@
     <link href="{!! asset('assets/css/bootstrap.min.css') !!}" rel="stylesheet">
     <link href="{!! asset('assets/css/bootstrap.techie.css?'.rand(1,999)) !!}" rel="stylesheet">
 @yield('completarheader')
-<style>
-    .header-social-icons {
-        position: absolute;
-        right: 15px;
-        top: 1px;
-        height: 40px;
-        width: 160px;
-        margin-top: 25px;
-    }
-    .header-social-icons ul {
-        list-style: none;
-    }
-    .header-social-icons li a{
-        font-size: 1.35em;
-        color: #999999;
-        float: right;
-        line-height: 40px;
-        text-align: center;
-        width: 40px;
-    }
-    #ccr-contact-sidebar li .google-plus:hover,
-     #social-buttons .google-plus:hover,
-     .google-plus:hover{
-         color: #FFF;
-         background-color: #db514f;
-     }
-    #ccr-contact-sidebar li .linkedin:hover,
-    #social-buttons .linkedin:hover,
-    .linkedin:hover{
-        color: #FFF;
-        background-color: #0077b5;
-    }
-    #ccr-contact-sidebar li .twitter:hover,
-    #social-buttons .twitter:hover,
-    .twitter:hover{
-        color: #FFF;
-        background-color: #2e9edd;
-    }
-    #ccr-contact-sidebar li .facebook:hover,
-    #social-buttons .facebook:hover,
-    .facebook:hover{
-        color: #FFF;
-        background-color: #3b5998;
-    }
 
-    #ccr-contact-sidebar li .instagram:hover,
-    #social-buttons .instagram:hover,
-    .instagram:hover{
-        color: #FFF;
-        background-color: #663399;
-    }
-    .google-plus, .linkedin, .twitter, .facebook, .instagram
-
-    {
-        display: inline-block;
-    }
-    .ccr-thumbnail p,
-    .ccr-thumbnail a,
-    .nav-paging i,
-    input[type="submit"],
-    button[type="submit"],
-    .footer-social-icons li a,
-    .header-social-icons li a,
-    #social-buttons a,
-    #ccr-contact-sidebar li a
-    {
-        -webkit-transition: all .25s ease-in;
-        -moz-transition: all .25s ease-in;
-        -ms-transition: all .25s ease-in;
-        -o-transition: all .25s ease-in;
-        transition: all .25s ease-in;
-    }
-    body,html{overflow-x:hidden}footer{border-top:1px solid #ddd;padding:30px;margin-top:50px}.row>[class*=col-]{margin-bottom:40px}.navbar-container{position:relative;min-height:100px}.navbar.navbar-fixed-bottom,.navbar.navbar-fixed-top{position:absolute;top:50px;z-index:0}.navbar.navbar-fixed-bottom .container,.navbar.navbar-fixed-top .container{max-width:90%}.btn-group{margin-bottom:10px}.form-inline input[type=password],.form-inline input[type=text],.form-inline select{width:180px}.input-group{margin-bottom:10px}.pagination{margin-top:0}
-
-</style>
 
 </head>
 <body>
 
 <header id="ccr-header">
 
-
-    <div style="background: #E83333;">
-        <div class="container">
-
-        </div>
-    </div>
 
     <nav class="navbar navbar-inverse navbar-static-top" style="border-bottom: 2px solid #CC0000; margin-bottom: 0;">
         <div class="container">
@@ -160,9 +80,16 @@
             <div class="row">
 
 
-                <div class="col-md-12 hidden-xs hidden-sm">
+                <div class="hidden-xs hidden-sm">
 
-                    <div class="header-social-icons">
+
+
+                    <div class="site-logo float-left col-md-4">
+                        <a href="{!! route('home') !!}">
+                            <img src="{!! asset('imagens/logoprefeitura.png') !!}" alt="Side Logo" style="padding-top: 0px; max-height: 100px;" data-pin-nopin="true">
+                        </a>
+                    </div>
+                    <div class="header-social-icons pull-right">
                         <ul>
 
                             <li >
@@ -176,25 +103,18 @@
 
                     </div><!--  /.cocial-icons -->
 
-                    <div class="site-logo float-left col-md-3">
-                        <a href="{!! route('home') !!}">
-                            <img src="{!! asset('imagens/logoprefeitura.png') !!}" alt="Side Logo" style="padding-top: 0px; max-height: 100px;" data-pin-nopin="true">
-                        </a>
-                    </div>
-
-
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
                         <ul class="nav nav-pills " style="padding-top: 25px;">
 
-                            <li><a class="turista" href="{!! route('turista') !!}" >TURISTA</a></li>
-                            <li><a class="turista" href="{!! route('turista') !!}" >SECRETARIAS</a></li>
-                            <li><a class="turista" href="{!! route('turista') !!}" >ORGÃOS</a></li>
-                            <li><a class="turista" href="{!! route('turista') !!}" >CIDADE</a></li>
-                            <li><a class="turista" href="{!! route('turista') !!}" >PREFEITURA</a></li>
-                            <li><a class="empresa" href="{!! route('empresa') !!}" >EMPRESA</a></li>
-                            <li><a class="sic" href="{!! route('sic') !!}" >SIC</a></li>
+                            <li><a class="cidade" href="{!! route('cidade') !!}" >A CIDADE</a></li>
+                            <li><a class="secretarias" href="{!! route('secretarias') !!}" >SECRETARIAS</a></li>
+                            <li><a class="orgaos" href="{!! route('orgaos') !!}" >ORGÃOS</a></li>
+                            <li><a class="downloads" href="{!! route('downloads') !!}" >DOWNLOADS</a></li>
+                            <li><a class="noticias" href="{!! route('noticias') !!}" >NOTÍCIAS</a></li>
 
                         </ul> <!-- /.nav /.navbar-nav -->
+
+
                     </div>
 
 
@@ -210,17 +130,33 @@
 
 @yield('content_index')
 
-<div class="container">
-    <div class="row">
-        <!-- Slider -->
-        <div class="col-sm-6 col-lg-6">
 
-            <div class="container">
-                footer
-            </div>
-        </div>
+<footer id="ccr-footer" class="hidden-xs hidden-sm">
+    <div class="container">
+        <div class="footer-social-icons">
+            <ul>
+                <li >
+                    <a href="https://www.facebook.com/PrefeituradeSertaniaGovernoMunicipal/" class="facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li >
+                    <a href="https://twitter.com/PrefeituradeSertaniaGovernoMunicipal" class="twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+                </li>
+            </ul>
+        </div><!--  /.cocial-icons -->
+        <div class="copyright">
+            <strong>PREFEITURA MUNICIPAL DE SERTÂNIA</strong><br/>
+            Praça João Pereira Vale, 20, Centro – Sertânia-PE.
+
+        </div> <!-- /.copyright -->
+    </div> <!-- /.container -->
+    <div class="menu-mobile hidden-md hidden-lg">
+        <ul>
+            <li></li>
+        </ul>
     </div>
-</div>
+
+</footer>  <!-- /#ccr-footer -->
+
 <!-- Main Scripts-->
 <script src="{!! asset('assets/js/jquery.js') !!}"></script>
 <script src="{!! asset('assets/js/bootstrap.min.js') !!}"></script>
@@ -233,7 +169,7 @@
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
         js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1";
+        js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.9&appId=723601331137231";
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
 
@@ -265,11 +201,11 @@
 
 
 
-        $('.cidadao').tooltip({title: "Serviços para o Cidadão", placement: "top"});
-        $('.turista').tooltip({title: "Serviços para o Turísta", placement: "top"});
-        $('.empresa').tooltip({title: "Serviços para a Empresa", placement: "top"});
-        $('.servidor').tooltip({title: "Serviços para o Servidor", placement: "top"});
-        $('.sic').tooltip({title: "Serviço de Informação ao Cidadão", placement: "top"});
+        $('.cidade').tooltip({title: "Informações sobre Sertânia", placement: "top"});
+        $('.secretarias').tooltip({title: "Informações sobre as secretarias", placement: "top"});
+        $('.orgaos').tooltip({title: "Sobre os orgãos da cidade", placement: "top"});
+        $('.noticias').tooltip({title: "Notícias sobre a cidade", placement: "top"});
+        $('.downloads').tooltip({title: "Baixe arquivos institucionais", placement: "top"});
     });
 
     $(window).load(function() {

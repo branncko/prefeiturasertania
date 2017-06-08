@@ -10,7 +10,7 @@ use Validator;
 class SecretariasController extends Controller
 {
     public function __construct() {
-        $this->middleware('admin.user');
+        $this->middleware('admin.user')->except('home');
 
     }
 
@@ -194,7 +194,7 @@ class SecretariasController extends Controller
      */
     public function find(Request $request)
     {
-        $secretarias = Secretarias::where('name','like','%'. $request->busca .'%' )->orderBy('id','desc')->paginate(20);
+        $secretarias = Secretarias::where('titulo','like','%'. $request->busca .'%' )->orderBy('id','desc')->paginate(20);
 
         if (count($secretarias) == 0) {
             return redirect()->to(route("secretarias-lista"))->withErrors("Nenhum registro encontrado");
@@ -203,5 +203,24 @@ class SecretariasController extends Controller
 
         return view("admin.secretarias-listar", compact("secretarias"));
 
+    }
+
+
+    public function home() {
+
+        $secretarias = Secretarias::all();
+
+        $secretariaPrimeira = Secretarias::where('deleted_at', null)->first();
+
+        return view('site.secretarias', compact('secretarias', 'secretariaPrimeira'));
+    }
+
+    public function homeOne($id) {
+
+        $secretarias = Secretarias::all();
+
+        $secretariaPrimeira = Secretarias::find($id);
+
+        return view('site.secretarias', compact('secretarias', 'secretariaPrimeira'));
     }
 }

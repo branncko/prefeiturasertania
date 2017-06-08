@@ -29,17 +29,19 @@ Route::post('/noticias/busca', 'NoticiasHomeController@noticiasBusca')->name('no
 Route::get('/noticias', 'NoticiasHomeController@noticiasLista')->name('noticias');
 Route::get('/noticia/{id}/{slug}', 'NoticiasHomeController@leitura')->name('noticias-ler');
 
-Route::get('/turista', function() {
-    return view('site.turismo');
-})->name('turista');
 
-Route::get('/empresa', function() {
-    return view('site.empresa');
-})->name('empresa');
+Route::get('/cidade', 'HomeController@cidade')->name('cidade');
+Route::get('/dados', 'HomeController@dados')->name('dados');
+Route::get('/hino', 'HomeController@hino')->name('hino');
+Route::get('/exprefeitos', 'HomeController@exprefeitos')->name('exprefeitos');
 
-Route::get('/sic', function() {
-    return view('site.sic');
-})->name('sic');
+Route::get('/secretarias', 'SecretariasController@home')->name('secretarias');
+Route::get('/secretarias/{id}', 'SecretariasController@homeOne')->name('secretarias-one');
+Route::get('/orgaos', 'OrgaosController@home')->name('orgaos');
+Route::get('/orgaos/{id}', 'OrgaosController@homeOne')->name('orgaos-one');
+Route::get('/downloads', 'DownloadsController@home')->name('downloads');
+Route::get('/downloads/{id}', 'DownloadsController@getFile')->name('downloads-one');
+
 
 
 Route::group(['prefix' => 'admin'], function () {

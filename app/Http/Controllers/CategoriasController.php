@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Categorias;
+use App\Noticias;
 use Illuminate\Http\Request;
 use \Validator;
 use \Session;
@@ -164,8 +165,14 @@ class CategoriasController extends Controller
     {
         $categoria = Categorias::find($id);
 
+        $noticia = Noticias::where('categoria_id', $id)->get();
+        if (count($noticia) != 0) {
+            return redirect(route("categoria-lista"))->withErrors("Existem notícias nesta categoria. Exclua-as ou modifique a categoria");
+
+        }
+
         if ($categoria == null) {
-            return redirect(route("noticia-lista"))->withErrors("Notícia não existente");
+            return redirect(route("categoria-lista"))->withErrors("Categoria não existente");
 
         }
 

@@ -33,7 +33,10 @@
                         <ul class="list-group col-sm-4">
                             <?php $ic=0; ?>
                             @foreach($noticiasCarousel as $noticiacarousel)
-                                <li data-target="#myCarousel" data-slide-to="{!! $ic !!}" class="list-group-item active"><h4>{!! $noticiacarousel->title !!}</h4></li>
+                                <li data-target="#myCarousel" data-slide-to="{!! $ic !!}" class="list-group-item active">
+                                    <h5 class="media-heading">{!! $noticiacarousel->categorias->name !!}</h5>
+                                    <h4>{!! $noticiacarousel->title !!}</h4>
+                                </li>
                                 <?php $ic++; ?>
                             @endforeach
                         </ul>
