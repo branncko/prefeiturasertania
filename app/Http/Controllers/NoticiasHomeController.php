@@ -33,7 +33,9 @@ class NoticiasHomeController extends Controller
     public function noticiasLista()
     {
         $noticias = Noticias::where('ativo',1)->orderBy('id','desc')->paginate(20);
-        return view('site.noticias', compact('noticias'));
+        $videoscinco = Videos::take(5)->get();
+
+        return view('site.noticias', compact('noticias','videoscinco'));
 
     }
     public function noticiasBusca(Request $request)
