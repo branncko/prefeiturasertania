@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Campanha;
+use App\Videos;
 use Illuminate\Http\Request;
 use App\Categorias;
 
@@ -23,9 +24,9 @@ class NoticiasHomeController extends Controller
         $noticiasCarousel = Noticias::where('ativo', 1)->where('carousel', 1)->orderBy('id', 'desc')->take(3)->get();
         $noticiasMais = Noticias::where('ativo', 1)->where('carousel', 0)->orderBy('id', 'desc')->get();
         $publicidades = Campanha::all();
+        $videoscinco = Videos::take(5)->get();
 
-
-        return view('site.home', compact('noticiasCarousel'), compact('noticiasMais','publicidades'));
+        return view('site.home', compact('noticiasCarousel'), compact('noticiasMais','publicidades','videoscinco'));
 
     }
 

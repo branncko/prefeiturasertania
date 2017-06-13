@@ -2,11 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Videos;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Session;
 use \Validator;
+use \Session;
+
 class VideosController extends Controller
 {
+    public function __construct() {
+        $this->middleware('admin.user');
+
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +21,9 @@ class VideosController extends Controller
      */
     public function index()
     {
-        //
+        $videos = Videos::orderBy('id','desc')->paginate(20);
+
+        return view("admin.videos-listar", compact("videos"));
     }
 
     /**
@@ -24,8 +33,9 @@ class VideosController extends Controller
      */
     public function create()
     {
-        //
+        return view("admin.videos-cad");
     }
+
 
     /**
      * Store a newly created resource in storage.
@@ -35,7 +45,32 @@ class VideosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $regras = [
+            'titulo' => 'required|max:144|min:5',
+            'link' => 'required|min:5',
+
+        ];
+        $messages = [
+            'required' => 'O campo :attribute é obrigatório.',
+            'max' => 'O campo :attribute deve ter no máximo :max caracteres.',
+            'min' => 'O campo :attribute deve ter no mínimo :min caracteres.',
+        ];
+
+        $validator = Validator::make($request->all(),$regras,$messages);
+
+
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput($request->all());
+        };
+
+
+        $videos = Videos::create($request->all());
+
+
+        Session::flash('sucesso', 'Video cadastrada com sucesso');
+
+        return redirect()->to(route("videos-lista"));
     }
 
     /**
@@ -46,7 +81,15 @@ class VideosController extends Controller
      */
     public function show($id)
     {
-        //
+
+        $video = Videos::find($id);
+        if ($video == null) {
+            return redirect(route("videos-lista"))->withErrors("Video não existente");
+
+        }
+
+        return view("admin.videos-ed", compact("video"));
+
     }
 
     /**
@@ -57,7 +100,15 @@ class VideosController extends Controller
      */
     public function edit($id)
     {
-        //
+        $videos = Videos::find($id);
+        if ($videos == null) {
+            return redirect(route("videos-lista"))->withErrors("Video não existente");
+
+        }
+        return view("admin.videos-ed", compact("videos"));
+
+
+
     }
 
     /**
@@ -69,7 +120,40 @@ class VideosController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $videos = Videos::find($id);
+        if ($videos == null) {
+            return redirect(route("videos-lista"))->withErrors("Video não existente");
+
+        }
+
+
+        $regras = [
+            'titulo' => 'required|max:144|min:5',
+            'link' => 'required|min:5',
+
+        ];
+        $messages = [
+            'required' => 'O campo :attribute é obrigatório.',
+            'max' => 'O campo :attribute deve ter no máximo :max caracteres.',
+            'min' => 'O campo :attribute deve ter no mínimo :min caracteres.',
+        ];
+
+        $validator = Validator::make($request->all(),$regras,$messages);
+
+
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput($request->all());
+        };
+
+
+        $videos->fill($request->all());
+        $videos->save();
+
+        Session::flash('sucesso', 'Video modificado com sucesso');
+
+        return redirect()->to(route("videos-lista"));
+
+
     }
 
     /**
@@ -80,6 +164,26 @@ class VideosController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $videos = Videos::find($id);
+
+
+        if ($videos == null) {
+            return redirect(route("videos-lista"))->withErrors("Video não existente");
+
+        }
+
+        $r = $videos->delete();
+
+        if ($r) {
+            Session::flash('sucesso', 'Video excluída com sucesso');
+
+            return redirect()->to(route("videos-lista"));
+
+        } else {
+            return redirect(route("videos-lista"))->withErrors("Video não excluída por algum motivo");
+
+
+        }
     }
+
 }
