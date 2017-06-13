@@ -49,7 +49,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <div class="col-md-12">
                     <ul class="nav navbar-nav">
-                        <li ><a href="http://www.sic.tenosoft.com.br/sistema/app_Login/app_Login.php?entidade=210" alt="Acesso a Informação" target="_blank"> Acesso à Informação</a></li>
+                        <li ><a href="{!! route('prefeitura') !!}" alt="A Prefeitura">A Prefeitura</a></li>
                         <li><a href="http://www.transparencianomunicipio.com.br/portal/v81/index/index.php?municipio=50&represent=2" alt="Portal da Tranparência"  target="_blank">Portal da Transparência</a></li>
                         <li><a href="https://www.tributosmunicipais.com.br/NFE-sertania/" alt="Nota Fiscal Eletrônica" target="_blank">Nota Fiscal Eletrônica</a></li>
                         <li><a href="http://www.sertania.pe.gov.br/webmail" alt="WebMail" target="_blank">WebMail</a></li>
@@ -62,8 +62,8 @@
                                 <div class="input-group">
                                     <input type="text" class="form-control" placeholder="Pesquisar…" value="" name="busca">
                                     <span class="input-group-btn">
-                                            <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
-                                        </span>
+                                        <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                                    </span>
                                 </div>
                             </form>
                         </li>
@@ -89,19 +89,7 @@
                             <img src="{!! asset('imagens/logoprefeitura.png') !!}" alt="Side Logo" style="padding-top: 0px; max-height: 100px;" data-pin-nopin="true">
                         </a>
                     </div>
-                    <div class="header-social-icons pull-right">
-                        <ul>
 
-                            <li >
-                                <a href="https://www.facebook.com/PrefeituradeSertaniaGovernoMunicipal/" class="facebook" target="_blank"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li >
-                                <a href="https://twitter.com/PrefeituradeSertaniaGovernoMunicipal" class="twitter" target="_blank"><i class="fa fa-twitter"></i></a>
-                            </li>
-
-                        </ul>
-
-                    </div><!--  /.cocial-icons -->
 
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
                         <ul class="nav nav-pills " style="padding-top: 25px;">
@@ -137,9 +125,6 @@
             <ul>
                 <li >
                     <a href="https://www.facebook.com/PrefeituradeSertaniaGovernoMunicipal/" class="facebook" target="_blank"><i class="fa fa-facebook"></i></a>
-                </li>
-                <li >
-                    <a href="https://twitter.com/PrefeituradeSertaniaGovernoMunicipal" class="twitter" target="_blank"><i class="fa fa-twitter"></i></a>
                 </li>
             </ul>
         </div><!--  /.cocial-icons -->
@@ -213,6 +198,13 @@
         var itemlength = $('#myCarousel .item').length;
         var triggerheight = Math.round(boxheight/itemlength+1);
         $('#myCarousel .list-group-item').outerHeight(triggerheight);
+
+        $('#myCarouselV').carousel(
+            {
+                interval: 2000
+            }
+        )
+
     });
 </script>
 </body>

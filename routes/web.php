@@ -37,6 +37,9 @@ Route::get('/hino', 'HomeController@hino')->name('hino');
 Route::get('/exprefeitos', 'HomeController@exprefeitos')->name('exprefeitos');
 Route::get('/simbolos', 'HomeController@simbolos')->name('simbolos');
 
+Route::get('/prefeitura', 'HomeController@prefeito')->name('prefeitura');
+Route::get('/viceprefeito', 'HomeController@viceprefeito')->name('viceprefeito');
+
 Route::get('/secretarias', 'SecretariasController@home')->name('secretarias');
 Route::get('/secretarias/{id}', 'SecretariasController@homeOne')->name('secretarias-one');
 Route::get('/orgaos', 'OrgaosController@home')->name('orgaos');

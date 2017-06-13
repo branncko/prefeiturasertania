@@ -44,4 +44,12 @@ class HomeController extends Controller
         return view('site.simbolos');
     }
 
+  public function prefeito() {
+        return view('site.prefeitura');
+    }
+
+    public function viceprefeito() {
+        return view('site.viceprefeito');
+    }
+
 }

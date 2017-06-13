@@ -8097,3 +8097,32 @@ button[type="submit"],
     text-align: center;
     width: 40px;
 }
+
+
+
+.carousel-indicadores{
+  position:absolute;
+  bottom:10px;
+
+  z-index:15;
+  width:100%;
+  top:100%;
+  padding-left:0;
+  list-style:none;
+  text-align:center}
+.carousel-indicadores li{
+  display:inline-block;
+  width:10px;
+  height:10px;
+  margin:1px;
+  text-indent:-999px;
+  border:1px solid #000;
+  border-radius:10px;
+  cursor:pointer;
+  background-color:#000\9;
+  background-color:transparent}
+.carousel-indicadores .active{
+  margin:0;
+  width:12px;
+  height:12px;
+  background-color:#000}
