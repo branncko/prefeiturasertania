@@ -22,7 +22,7 @@ class NoticiasHomeController extends Controller
     public function index()
     {
         $noticiasCarousel = Noticias::where('ativo', 1)->where('carousel', 1)->orderBy('id', 'desc')->take(3)->get();
-        $noticiasMais = Noticias::where('ativo', 1)->where('carousel', 0)->orderBy('id', 'desc')->get();
+        $noticiasMais = Noticias::where('ativo', 1)->where('carousel', 0)->orderBy('id', 'desc')->take(5)->get();
         $publicidades = Campanha::all();
         $videoscinco = Videos::take(5)->get();
 
