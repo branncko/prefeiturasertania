@@ -10,7 +10,7 @@ class Videos extends Model
     use SoftDeletes;
 
     protected $table = 'videos';
-    protected $fillable = ['titulo','imagem','embed','link'];
+    protected $fillable = ['titulo','link'];
 
 
     protected $dates = ['deleted_at','created_at','updated_at'];
