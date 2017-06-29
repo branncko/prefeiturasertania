@@ -49,7 +49,6 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <div class="col-md-12">
                     <ul class="nav navbar-nav">
-                        <li ><a href="{!! route('prefeitura') !!}" alt="A Prefeitura">A Prefeitura</a></li>
                         <li><a href="http://www.transparencianomunicipio.com.br/portal/v81/index/index.php?municipio=50&represent=2" alt="Portal da Tranparência"  target="_blank">Portal da Transparência</a></li>
                         <li><a href="https://www.tributosmunicipais.com.br/NFE-sertania/" alt="Nota Fiscal Eletrônica" target="_blank">Nota Fiscal Eletrônica</a></li>
                         <li><a href="http://www.sertania.pe.gov.br/webmail" alt="WebMail" target="_blank">WebMail</a></li>
@@ -95,6 +94,7 @@
                         <ul class="nav nav-pills " style="padding-top: 25px;">
 
                             <li><a class="cidade" href="{!! route('cidade') !!}" >A CIDADE</a></li>
+                            <li><a class="cidade" href="{!! route('prefeitura') !!}" >A PREFEITURA</a></li>
                             <li><a class="secretarias" href="{!! route('secretarias') !!}" >SECRETARIAS</a></li>
                             <li><a class="orgaos" href="{!! route('orgaos') !!}" >ORGÃOS</a></li>
                             <li><a class="downloads" href="{!! route('downloads') !!}" >DOWNLOADS</a></li>
