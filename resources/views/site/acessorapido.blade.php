@@ -11,6 +11,7 @@
             <div class="item @if($viac == 0) active @endif">
 
                 <iframe width="100%" src="{!! $vi->link !!}?ecver=1" frameborder="0" allowfullscreen></iframe>
+
                 <?php $viac++; ?>
             </div>
             @endforeach
@@ -42,7 +43,6 @@
             <li><a href="http://www.transparencianomunicipio.com.br/portal/v81/index/index.php?municipio=50&represent=2" target="_blank">Portal da Transparência</a></li>
             <li><a href="https://www.tributosmunicipais.com.br/NFE-sertania/" target="_blank">Nota Fiscal Eletrônica</a></li>
             <li><a href="#">Site Câmara de Vereadores</a></li>
-            <li><a href="#">Editais e Licitações</a></li>
             <li class="divider"></li>
             <li><a href="https://www.facebook.com/PrefeituradeSertaniaGovernoMunicipal/"><i class="fa fa-facebook"></i> Perfil do Facebook</a></li>
         </ul>
