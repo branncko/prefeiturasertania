@@ -16,9 +16,9 @@ class NegadoSeNaoForAdmin
      */
     public function handle($request, Closure $next, $guard = 'admin_user')
     {
-//        if (! Auth::guard($guard)->check()) {
-//            return redirect('/admin/login')->withErrors(array('message' => 'Não é administrador'));
-//        }
+        if (! Auth::guard($guard)->check()) {
+            return redirect('/admin/login')->withErrors(array('message' => 'Não é administrador'));
+        }
         return $next($request);
     }
 }
