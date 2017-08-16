@@ -16,7 +16,15 @@
                             <?php $ic=0; ?>
                             @foreach($noticiasCarousel as $noticiacarousel)
                                 <div class="item @if($ic == 0) active @endif">
-                                    <img src="{!! route('arquivo-carousel',$noticiacarousel->id) !!}">
+
+                                    <?php if ( substr($noticiacarousel->photo, 0 , 4) == 'http' ) { ?>
+                                    <img src="{!!  $noticiacarousel->photo !!}" alt="img" class="img-thumbnail img-responsive" width="760" height="400" />
+                                    <?php } else { ?>
+                                        <img src="{!! route('arquivo-carousel',$noticiacarousel->id) !!}">
+                                    <?php } ?>
+
+
+
                                     <div class="carousel-caption">
                                         <h4><a href="{!! route('noticias-ler',[$noticiacarousel->id,$noticiacarousel->slug]) !!}">{!! $noticiacarousel->title !!}</a></h4>
                                         <p>{!! $noticiacarousel->sobre !!}</p>
@@ -84,6 +92,8 @@
 
                     <div class="col-lg-6 col-sm-6 ">
                         <a href="@if($campanha->link != null) {!! $campanha->link !!} @else javascript:void(0); @endif" class="thumbnail">
+
+
 
                             <img src="{!! route('arquivo-campanha', $campanha->id) !!}" alt="">
 

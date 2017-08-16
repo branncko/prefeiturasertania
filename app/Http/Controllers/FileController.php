@@ -31,6 +31,7 @@ class FileController extends Controller
 
 
 
+
        $fileretorno = Image::make(Storage::get($noticia->photo))->fit(760, 400);
 
 //        return (new Response($fileretorno, 200))
@@ -38,6 +39,7 @@ class FileController extends Controller
 
         return $fileretorno->response('jpg');
     }
+
     public function getFileChamadinhas($id) {
 
         $noticia = Noticias::find($id);

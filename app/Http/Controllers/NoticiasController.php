@@ -47,7 +47,8 @@ class NoticiasController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function storeAnterior(Request $request)
+//    public function store(Request $request)
     {
 
 //        dd($request->all());
@@ -107,6 +108,75 @@ class NoticiasController extends Controller
 
     }
 
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+
+//        dd($request->all());
+
+//        $fotoprincipal = $request->file("photo");
+
+        $regras = [
+            'title' => 'required|max:144|min:15',
+            'texto' => 'required',
+            'sobre' => 'required|max:255|min:50',
+
+        ];
+        $messages = [
+            'required' => 'O campo :attribute é obrigatório.',
+            'max' => 'O campo :attribute deve ter no máximo :max caracteres.',
+            'min' => 'O campo :attribute deve ter no mínimo :min caracteres.',
+        ];
+
+        $validator = Validator::make($request->all(),$regras,$messages);
+
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput($request->all());
+        };
+
+        $noticia = new Noticias;
+//
+//        if (!empty($fotoprincipal)) {
+//            if ($fotoprincipal->isValid()) {
+//
+////            $file->move($destinationPath,$file->getClientOriginalName());
+//                $foto = $fotoprincipal->store('public/photo');
+//                $noticia->photo = $foto;
+//
+//            } else {
+//                return redirect()->back()->withErrors(["fotoprincipal"=>"Não é uma foto válida"]);
+//            }
+//        }
+
+
+
+        $noticia->fill($request->all());
+        if ($request->has("ativo")) {$noticia->ativo = true;}else{$noticia->ativo=false;}
+        if ($request->has("carousel")) {$noticia->carousel = true;}else{$noticia->carousel=false;}
+
+        $noticia->slug = str_slug($request->title,"-");
+
+        $noticia->categoria_id = $request->input('categoria');
+        $noticia->save();
+
+        Session::flash('sucesso', 'Notícia cadastrada com sucesso');
+
+        return redirect()->to(route("noticia-lista"));
+
+
+
+
+
+    }
+
+
+
     /**
      * Display the specified resource.
      *
@@ -144,7 +214,7 @@ class NoticiasController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function updateAnt(Request $request, $id)
     {
 
 
@@ -190,6 +260,76 @@ class NoticiasController extends Controller
                 return redirect()->back()->withErrors(["fotoprincipal"=>"Não é uma foto válida"]);
             }
         }
+
+        if (!$request->has("ativo")) $noticia->ativo = false;
+        if ($request->has("carousel")) {$noticia->carousel = true;}else{$noticia->carousel=false;}
+
+        $noticia->slug = str_slug($request->title,"-");
+        $noticia->categoria_id = $request->input('categoria');
+        $noticia->save();
+
+        Session::flash('sucesso', 'Notícia atualizada com sucesso');
+
+        return redirect()->to(route("noticia-lista"));
+
+
+
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+
+
+
+        $noticia = Noticias::find($id);
+
+        if ($noticia == null) {
+            return redirect(route("noticia-lista"))->withErrors("Notícia não existente");
+
+
+        }
+
+//        $fotoprincipal = $request->file("photo");
+
+        $regras = [
+            'title' => 'required|max:144|min:15',
+            'texto' => 'required',
+            'sobre' => 'required|max:255|min:50',
+
+        ];
+        $messages = [
+            'required' => 'O campo :attribute é obrigatório.',
+            'max' => 'O campo :attribute deve ter no máximo :max caracteres.',
+            'min' => 'O campo :attribute deve ter no mínimo :min caracteres.',
+        ];
+
+        $validator = Validator::make($request->all(),$regras,$messages);
+
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput($request->all());
+        };
+
+//        $noticia->fill($request->except(['photo']));
+        $noticia->fill($request->all());
+
+//        if (!empty($fotoprincipal)) {
+//            if ($fotoprincipal->isValid()) {
+//
+////            $file->move($destinationPath,$file->getClientOriginalName());
+//                $foto = $fotoprincipal->store('photo');
+//                $noticia->photo = $foto;
+//
+//            } else {
+//                return redirect()->back()->withErrors(["fotoprincipal"=>"Não é uma foto válida"]);
+//            }
+//        }
 
         if (!$request->has("ativo")) $noticia->ativo = false;
         if ($request->has("carousel")) {$noticia->carousel = true;}else{$noticia->carousel=false;}

@@ -4,7 +4,22 @@
     <meta property="og:type"          content="website" />
     <meta property="og:title"         content="Prefeitura Municipal de Sertânia" />
     <meta property="og:description"   content="Website oficial da Prefeitura Municipal de Sertânia-PE" />
-    <meta property="og:image"         content="{!! asset('imagens/logoprefeitura.png') !!}" />
+
+    @if($noticia->photo != null)
+    <a class="pull-left" href="#" style="width: 74px; height: 74px;">
+
+        <?php if ( substr($noticia->photo, 0 , 4) == 'http' ) { ?>
+
+            <meta property="og:image"         content="{!! $noticia->photo !!}" />
+
+        <?php } ?>
+
+
+    </a>
+    @else
+        <meta property="og:image"         content="{!! asset('imagens/logoprefeitura.png') !!}" />
+
+    @endif
 
 @endsection
 @section('content_index')

@@ -74,18 +74,44 @@
                             </div>
                         </div>
 
+                        {{--<div class="form-group">--}}
+                            {{--<label class="control-label col-md-2 col-sm-2 col-xs-12">Foto Matéria</label>--}}
+                            {{--<span class="image col-md-2 pull-right">--}}
+                                    {{--<img src="{!! route('arquivo-get',$noticia->id)!!}" alt="img" class="img-thumbnail img-responsive" />--}}
+                                {{--</span>--}}
+                            {{--<div class="col-md-6 col-sm-6 col-xs-12">--}}
+
+                                {{--<input type="file" id="photo" class="form-control" name="photo" />--}}
+                                {{--<small>Tamanho da foto: 760 x 400</small>--}}
+
+                            {{--</div>--}}
+
+                        {{--</div>--}}
+
                         <div class="form-group">
                             <label class="control-label col-md-2 col-sm-2 col-xs-12">Foto Matéria</label>
-                            <span class="image col-md-2 pull-right">
-                                    <img src="{!! route('arquivo-get',$noticia->id)!!}" alt="img" class="img-thumbnail img-responsive" />
-                                </span>
                             <div class="col-md-6 col-sm-6 col-xs-12">
 
-                                <input type="file" id="photo" class="form-control" name="photo" />
+                                <input type="file" id="photo_escolhe" class="form-control photo-escolhe" name="photo_escolhe"  />
+                                <input type="text" id="foto" class=" photoenviada" value="{!! $noticia->photo !!}" name="photo">
+
                                 <small>Tamanho da foto: 760 x 400</small>
+                            </div>
+                            <div class="col-md-3 col-sm-3">
+                                <i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw text-danger loadimg"></i>
+
+                                @if($noticia->photo != null)
+                                    <?php if ( substr($noticia->photo, 0 , 4) == 'http' ) { ?>
+                                        <img src="{!!  $noticia->photo !!}" alt="img" class="img-thumbnail img-responsive fotoenviadapreview" width="760" height="400" />
+                                    <?php } else { ?>
+                                        <img src="{!! route('arquivo-carousel',$noticia->id) !!}" class="img-responsive fotoenviadapreview" alt="">
+                                    <?php } ?>
+                                @else
+                                    <img src="" class="hide img-responsive fotoenviadapreview" alt="">
+
+                                @endif
 
                             </div>
-
                         </div>
 
                         <div class="form-group">
@@ -209,6 +235,28 @@
 
     <!-- textarea resize -->
     <script src="{{ asset('assets-admin/js/textarea/autosize.min.js') }}"></script>
+
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAXDBVfcQx-z6rBAEjUtLqdZSgZzuQsgY4",
+            authDomain: "governo-sertania.firebaseapp.com",
+            databaseURL: "https://governo-sertania.firebaseio.com",
+            projectId: "governo-sertania",
+            storageBucket: "governo-sertania.appspot.com",
+            messagingSenderId: "509975170605"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+
+    <script src="{{ asset('assets-admin/js/foto-firebase.js') }}"></script>
+
+
     <script>
         autosize($('.resizable_textarea'));
     </script>

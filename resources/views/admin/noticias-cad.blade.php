@@ -74,10 +74,16 @@
 
                         <div class="form-group">
                             <label class="control-label col-md-2 col-sm-2 col-xs-12">Foto Matéria</label>
-                            <div class="col-md-10 col-sm-10 col-xs-12">
+                            <div class="col-md-6 col-sm-6 col-xs-12">
 
-                                <input type="file" id="photo" class="form-control" name="photo"  />
+                                <input type="file" id="photo_escolhe" class="form-control photo-escolhe" name="photo_escolhe"  />
+                                <input type="text" id="foto" class=" photoenviada" name="photo">
+
                                 <small>Tamanho da foto: 760 x 400</small>
+                            </div>
+                            <div class="col-md-3 col-sm-3">
+                                <i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw text-danger loadimg"></i>
+                                <img src="" class="hide img-responsive fotoenviadapreview" alt="">
                             </div>
                         </div>
 
@@ -200,6 +206,26 @@
 
     <!-- textarea resize -->
     <script src="{{ asset('assets-admin/js/textarea/autosize.min.js') }}"></script>
+
+
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAXDBVfcQx-z6rBAEjUtLqdZSgZzuQsgY4",
+            authDomain: "governo-sertania.firebaseapp.com",
+            databaseURL: "https://governo-sertania.firebaseio.com",
+            projectId: "governo-sertania",
+            storageBucket: "governo-sertania.appspot.com",
+            messagingSenderId: "509975170605"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+
+    <script src="{{ asset('assets-admin/js/foto-firebase.js') }}"></script>
+
+
     <script>
         autosize($('.resizable_textarea'));
     </script>
