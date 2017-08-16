@@ -74,10 +74,16 @@
                             <tr class="even pointer @if(!$noticia->ativo) warning @endif">
                                 <td class="a-center ">
                                     <input type="checkbox" value="{!! $noticia->id !!}" class="flat" name="table_records">
-                                </td>@if($noticia->photo != null)
-                                <td class="col-md-1">
-                                    <img src="{!! route('arquivo-get',$noticia->id)!!}" alt="img" class="img-thumbnail img-responsive" />
-                                </td>@endif
+                                </td>
+                                @if($noticia->photo != null)
+                                    <td class="col-md-1">
+                                        <?php if ( substr($noticia->photo, 0 , 4) == 'http' ) { ?>
+                                        <img src="{!!  $noticia->photo !!}" alt="img" class="img-thumbnail img-responsive" />
+                                        <?php } else { ?>
+                                        <img src="{!! route('arquivo-get',$noticia->id)!!}" alt="img" class="img-thumbnail img-responsive" />
+                                        <?php } ?>
+                                    </td>
+                                @endif
                                 <td class=" "@if($noticia->photo == null)colspan="2"@endif>{!! $noticia->title !!}</td>
                                 <td class=" ">{!! $noticia->categorias->name !!}</td>
                                 <td class=" ">{!! $noticia->created_at->format('d/m/Y') !!}</td>
