@@ -74,7 +74,15 @@
 
                     <li class="media">
                         <a class="pull-left" href="{!! route('noticias-ler',[$noticiasMaisUni->id,$noticiasMaisUni->slug]) !!}" style="width: 74px; height: 74px;">
-                            <img class="media-object img-thumbnail"   src="{!! route('arquivo-chamadinhas',$noticiasMaisUni->id) !!}">
+
+                            <?php if ( substr($noticiasMaisUni->photo, 0 , 4) == 'http' ) { ?>
+                            <img src="{!!  $noticiasMaisUni->photo !!}" alt="img" class="img-thumbnail img-responsive" width="760" height="400" />
+                            <?php } else { ?>
+                            <img src="{!! route('arquivo-carousel',$noticiasMaisUni->id) !!}">
+                            <?php } ?>
+
+
+                            {{--<img class="media-object img-thumbnail"   src="{!! route('arquivo-chamadinhas',$noticiasMaisUni->id) !!}">--}}
                         </a>
                         <div class="media-body">
                             <h5 class="media-heading">{!! $noticiasMaisUni->categorias->name !!}</h5>
