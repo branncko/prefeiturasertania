@@ -51,7 +51,7 @@
                     <ul class="nav navbar-nav">
                         <li><a href="http://www.transparencianomunicipio.com.br/portal/v81/index/index.php?municipio=50&represent=2" alt="Portal da Tranparência"  target="_blank">Portal da Transparência</a></li>
                         <li><a href="https://www.tributosmunicipais.com.br/NFE-sertania/" alt="Nota Fiscal Eletrônica" target="_blank">Nota Fiscal Eletrônica</a></li>
-                        <li><a href="http://gestor11.tributosmunicipais.com.br/sertania/views/publico/portaldocontribuinte/index.xhtml;jsessionid=F832B279FE2BBE393599F43CA6658227" alt="Portal do Contribuinte" target="_blank">Portal do Contribuinte</a></li>
+                        <li><a href="http://gestor10.tributosmunicipais.com.br/gestor/views/publico/index.xhtml" alt="Portal do Contribuinte" target="_blank">Portal do Contribuinte</a></li>
                         <li><a href="http://www.sertania.pe.gov.br/webmail" alt="WebMail" target="_blank">WebMail</a></li>
                     </ul>
 
