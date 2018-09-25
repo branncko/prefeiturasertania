@@ -208,5 +208,7 @@
 
     });
 </script>
+@yield('content_index_js')
+
 </body>
 </html>
