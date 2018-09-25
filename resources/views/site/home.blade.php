@@ -138,10 +138,11 @@
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
 
+@endsection
+@section('content_index_js')
     <script>
         $(document).ready(function(){
             $('#modalMedicos').modal('show');
         });
     </script>
-
 @endsection
