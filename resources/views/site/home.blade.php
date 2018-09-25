@@ -116,4 +116,26 @@
        @include('site.acessorapido')
     </div>
 
+
+
+    <div class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">SELEÇÃO MÉDICOS 2018</h4>
+                </div>
+                <div class="modal-body">
+
+                    <h3><a href="http://sertania.pe.gov.br/downloads/13">EDITAL SELEÇÃO MÉDICOS 2018</a></h3>
+                    <p>Edital para seleção simplificada de médicos do Governo Municipal de Sertânia</p>
+
+                    <h3><a href="http://sertania.pe.gov.br/downloads/14">FICHA DE INSCRIÇÃO SELEÇÃO MÉDICOS 2018</a></h3>
+                    <p>Ficha de inscrição para seleção simplificada de médicos do Governo Municipal de Sertânia</p>
+                </div>
+
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
 @endsection
