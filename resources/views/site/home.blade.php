@@ -129,7 +129,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title">SELEÇÃO MÉDICOS 2018</h4>
+                    <h2 class="modal-title">SELEÇÃO MÉDICOS 2018</h2>
                 </div>
                 <div class="modal-body">
 
