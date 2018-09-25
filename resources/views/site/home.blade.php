@@ -1,5 +1,11 @@
 @extends('site.index')
-
+@section('completarheader')
+    <style>
+        .modal-backdrop {
+            z-index: 0;
+        }
+    </style>
+    @endsection
 @section('content_index')
     <div class="container">
 
