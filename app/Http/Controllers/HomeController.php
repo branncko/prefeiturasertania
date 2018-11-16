@@ -52,4 +52,7 @@ class HomeController extends Controller
         return view('site.viceprefeito');
     }
 
+    public function transparencia() {
+        return view('site.transparencia');
+    }
 }

@@ -14,6 +14,7 @@
 Route::get('/', 'NoticiasHomeController@index')->name('home');
 Route::get('/index', 'NoticiasHomeController@index')->name('index');
 Route::get('/home', 'NoticiasHomeController@index')->name('home');
+Route::get('/transparencia', 'HomeController@transparencia')->name('transparencia');
 
 
 
