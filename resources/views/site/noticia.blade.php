@@ -32,7 +32,7 @@
 
                         <h2>{!! $noticia->title !!}</h2>
                     <div class="article-like-comment-date">
-                        Por {!! $noticia->por !!} - em <time datetime="{!! $noticia->updated_at->format('d/m/Y') !!}">{!! $noticia->updated_at->format('d/m/Y') !!}</time>
+                        Por {!! $noticia->por !!} - em <time datetime="{!! $noticia->created_at->format('d/m/Y') !!}">{!! $noticia->updated_at->format('d/m/Y') !!}</time>
                         <a href="javascript:print();" title="Imprimir" class="hidden-xs btn btn-default btn-xs"><i class="fa fa-print"></i></a>
                         <a href="whatsapp://send?text={!! $noticia->title !!} {!! route('noticias-ler',[$noticia->id,$noticia->slug]) !!}" data-action="share/whatsapp/share" class="btn btn-success btn-xs"><i class="fa fa-whatsapp"></i></a>
 
