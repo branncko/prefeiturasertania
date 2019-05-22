@@ -40,6 +40,8 @@ class NoticiasHomeController extends Controller
     }
     public function noticiasBusca(Request $request)
     {
+        $videoscinco = Videos::take(5)->get();
+
         $noticias = Noticias::where('title','like','%'. $request->busca .'%' )->orderBy('id','desc')->paginate(20);
 
         if (count($noticias) == 0) {
@@ -47,7 +49,7 @@ class NoticiasHomeController extends Controller
 
         }
 
-        return view("site.noticias", compact("noticias"));
+        return view("site.noticias", compact("noticias","videoscinco"));
 
     }
 
