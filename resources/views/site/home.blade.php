@@ -15,8 +15,7 @@
                     <div class="alert alert-danger alert-dismissible text-center" role="alert">
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                             <h2><b>Concurso Público da Prefeitura de Sertânia-PE 2019</b></h2> 
-                            <h3><a href="https://site.admtec.org.br/prefeitura-de-sertania-pe/inscricao" target="_blank">Clique aqui e faça sua inscrição</a></h3>
-                            <p><small><a href="{!! route('downloads') !!}">Edital na Aba de Downloads</a></small></p>
+                            <p><small><a href="{!! route('downloads') !!}">Publicações na aba Download</a></small></p>
                     </div>
                </div>
             </div>
