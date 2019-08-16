@@ -137,7 +137,7 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/videos/deleta/{id}','VideosController@destroy')->name('videos-deleta');
 
 
-
+        Route::post('/uploadImagemCorpo','NoticiasController@uploadImagemCorpo')->name('upload-img');
 
 
 });

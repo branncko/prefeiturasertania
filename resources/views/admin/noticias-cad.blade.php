@@ -191,11 +191,52 @@
 
             $('textarea#editor').summernote({
                 height: 300,
+                callbacks: {
+                    onImageUpload: function(files) {
+                        // sendFile(files[0], editor, welEditable);
+                        var $this = $(this);
+                        var $files = $(files);
 
+                        data = new FormData();
+                        data.append("file", $files[0]);
+                        $.ajax({
+                            data: data,
+                            type: 'POST',
+                            xhr: function() {
+                                var myXhr = $.ajaxSettings.xhr();
+                                if (myXhr.upload) myXhr.upload.addEventListener('progress',progressHandlingFunction, false);
+                                return myXhr;
+                            },
+                            url:'{{route('upload-img')}}',
+                            cache: false,
+                            contentType: false,
+                            processData: false,
+                            success: function(url) {
+                                console.log(url)
+                                $this.summernote('insertImage',url, function ($image) {
+                                });
+                            }
+                        });
+
+
+                    }
+                }
             });
 
 
+            function sendFile(file, editor, welEditable) {
 
+            }
+
+            function progressHandlingFunction(e){
+                if(e.lengthComputable){
+                    $('progress').attr({value:e.loaded, max:e.total});
+                    // reset progress on complete
+                    if (e.loaded == e.total) {
+                        $('progress').attr('value','0.0');
+                    }
+                }
+            }
         });
     </script>
 

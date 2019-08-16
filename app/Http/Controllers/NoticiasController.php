@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
 use App\Categorias;
 use App\Noticias;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Storage;
 use \Validator;
 use Illuminate\Http\Request;
+use Image;
 
 class NoticiasController extends Controller
 {
@@ -400,38 +402,23 @@ class NoticiasController extends Controller
 
     public function uploadImagemCorpo(Request $request) {
 
-        $file = $request->file('file');
-        dd($file);
-        /*//Display File Name
-        echo 'File Name: '.$file->getClientOriginalName();
-        echo '<br>';
+            $file = $request->file('file');
 
-        //Display File Extension
-        echo 'File Extension: '.$file->getClientOriginalExtension();
-        echo '<br>';
-
-        //Display File Real Path
-        echo 'File Real Path: '.$file->getRealPath();
-        echo '<br>';
-
-        //Display File Size
-        echo 'File Size: '.$file->getSize();
-        echo '<br>';
-
-        //Display File Mime Type
-        echo 'File Mime Type: '.$file->getMimeType();*/
+            $extension = $file->getClientOriginalExtension();
+            $rand = time() . random_int(100, 999);
+            $fileName = time() . random_int(100, 999) . '.' . $extension;
+            $destinationPath = public_path('images/');
+            $url = 'http://' . $_SERVER['HTTP_HOST'] . '/uploads/';
+            $fullPath = $destinationPath . $fileName;
 
 
-//        if ($file->isValid()) {
+//            $file->store($destinationPath, $fileName);
+//            Storage::disk('uploads')->putFile($fileName,$file->getClientOriginalName());
+              $path=  $file->store(
+                    $rand, 'uploads'
+                );
+            return $url .$path;
 
-//            $file->move($destinationPath,$file->getClientOriginalName());
-            $foto = $file->store('images');
-            return response()
-                ->json(['photo' => $foto]);
-//        }
-
-        //Move Uploaded File
-//        $destinationPath = 'uploads';
 
     }
 
