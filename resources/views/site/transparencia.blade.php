@@ -24,7 +24,7 @@
 
 <frameset rows="0,*" border="0">
     <frame name="header" scrolling="no" noresize target="main">
-    <frame name="main" src="https://www.sertaniape.transparencianomunicipio.com.br">
+    <frame name="main" src="https://tenosoftsistemas.com.br/transparencia/pe/sertania">
     <noframes>
         <body>
         </body>
