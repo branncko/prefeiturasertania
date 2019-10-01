@@ -40,7 +40,7 @@
         <ul class="nav nav-list">
             <li><a href="{!! route('noticias') !!}">Notícias</a></li>
             <li class="divider"></li>
-            <li><a href="http://www.transparencianomunicipio.com.br/portal/v81/index/index.php?municipio=50&represent=2" target="_blank">Portal da Transparência</a></li>
+            <li><a href="{!! route('transparencia') !!}" target="_blank">Portal da Transparência</a></li>
             <li><a href="https://www.tributosmunicipais.com.br/NFE-sertania/" target="_blank">Nota Fiscal Eletrônica</a></li>
             <li><a href="#">Site Câmara de Vereadores</a></li>
             <li class="divider"></li>
