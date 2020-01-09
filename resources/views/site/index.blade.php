@@ -100,6 +100,7 @@
                             <li><a class="secretarias" href="{!! route('secretarias') !!}" >SECRETARIAS</a></li>
                             <li><a class="orgaos" href="{!! route('orgaos') !!}" >ORGÃOS</a></li>
                             <li><a class="downloads" href="{!! route('downloads') !!}" >DOWNLOADS</a></li>
+                            <li><a class="editais" href="{!! route('editais') !!}" >EDITAIS</a></li>
                             <li><a class="noticias" href="{!! route('noticias') !!}" >NOTÍCIAS</a></li>
 
                         </ul> <!-- /.nav /.navbar-nav -->

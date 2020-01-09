@@ -110,6 +110,12 @@
                                     <li><a href="{!! route('downloads-lista') !!}">Listar</a></li>
                                 </ul>
                             </li>
+                            <li><a><i class="fa fa-download"></i> Editais <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu" style="display: none">
+                                    <li><a href="{!! route('editais-cadastro') !!}">Cadastrar</a></li>
+                                    <li><a href="{!! route('editais-lista') !!}">Listar</a></li>
+                                </ul>
+                            </li>
                             <li><a><i class="fa fa-archive"></i> Campanhas <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu" style="display: none">
                                     <li><a href="{!! route('campanha-cadastro') !!}">Cadastrar</a></li>

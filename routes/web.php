@@ -16,7 +16,9 @@ Route::get('/index', 'NoticiasHomeController@index')->name('index');
 Route::get('/home', 'NoticiasHomeController@index')->name('home');
 Route::get('/transparencia', 'HomeController@transparencia')->name('transparencia');
 
-
+//Route::get('/gerarSenha', function() {
+//    return bcrypt('270287');
+//});
 
 Auth::routes();
 
@@ -47,6 +49,8 @@ Route::get('/orgaos', 'OrgaosController@home')->name('orgaos');
 Route::get('/orgaos/{id}', 'OrgaosController@homeOne')->name('orgaos-one');
 Route::get('/downloads', 'DownloadsController@home')->name('downloads');
 Route::get('/downloads/{id}', 'DownloadsController@getFile')->name('downloads-one');
+Route::get('/editais', 'EditaisController@home')->name('editais');
+Route::get('/editais/{id}', 'EditaisController@getFile')->name('editais-one');
 
 
 
@@ -91,13 +95,20 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/categoria/deleta/{id}','CategoriasController@destroy')->name('categoria-deleta');
 
         Route::get('/downloads/listar','DownloadsController@index')->name('downloads-lista');
-    Route::post('/downloads/buscar','DownloadsController@find')->name('downloads-buscar');
-
-    Route::get('/downloads/cadastro','DownloadsController@create')->name('downloads-cadastro');
+        Route::post('/downloads/buscar','DownloadsController@find')->name('downloads-buscar');
+        Route::get('/downloads/cadastro','DownloadsController@create')->name('downloads-cadastro');
         Route::post('/downloads/cadastro','DownloadsController@store')->name('downloads-salva');
         Route::get('/downloads/{id}','DownloadsController@show')->name('downloads-mostra');
         Route::post('/downloads/editar/{id}','DownloadsController@update')->name('downloads-update');
         Route::get('/downloads/deleta/{id}','DownloadsController@destroy')->name('downloads-deleta');
+
+        Route::get('/editais/listar','EditaisController@index')->name('editais-lista');
+        Route::post('/editais/buscar','EditaisController@find')->name('editais-buscar');
+        Route::get('/editais/cadastro','EditaisController@create')->name('editais-cadastro');
+        Route::post('/editais/cadastro','EditaisController@store')->name('editais-salva');
+        Route::get('/editais/{id}','EditaisController@show')->name('editais-mostra');
+        Route::post('/editais/editar/{id}','EditaisController@update')->name('editais-update');
+        Route::get('/editais/deleta/{id}','EditaisController@destroy')->name('editais-deleta');
 
 
         Route::get('/campanhas/listar','CampanhaController@index')->name('campanha-lista');
