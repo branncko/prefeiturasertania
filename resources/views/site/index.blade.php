@@ -85,7 +85,7 @@
 
 
 
-                    <div class="site-logo float-left col-md-4">
+                    <div class="site-logo float-left col-md-3">
                         <a href="{!! route('home') !!}">
                             <img src="{!! asset('imagens/logoprefeitura.png') !!}" alt="Side Logo" style="padding-top: 0px; max-height: 100px;" data-pin-nopin="true">
                         </a>
