@@ -49,7 +49,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <div class="col-md-12">
                     <ul class="nav navbar-nav">
-                        <li><a href="{!! route('transparencia') !!}" alt="Portal da Tranparência"  target="_blank">Portal da Transparência</a></li>
+                        <li><a href="https://tenosoftsistemas.com.br/transparencia/pe/sertania/" alt="Portal da Tranparência"  target="_blank">Portal da Transparência</a></li>
                         <li><a href="https://www.tributosmunicipais.com.br/NFE-sertania/" alt="Nota Fiscal Eletrônica" target="_blank">Nota Fiscal Eletrônica</a></li>
                         <li><a href="http://gestor.tributosmunicipais.com.br/sertania/views/publico/portaldocontribuinte" alt="Portal do Contribuinte" target="_blank">Portal do Contribuinte</a></li>
                        <!-- <li><a href="http://gecea.sertania.pe.gov.br" alt="Sistema GECEA" target="_blank">Sistema</a></li> -->
