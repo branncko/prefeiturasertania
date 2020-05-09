@@ -11,7 +11,7 @@
 
         <div class="row">
             <div class="col-sm-6">
-               <div class="container">
+               <div class="">
                     <div class="alert alert-danger alert-dismissible text-center" role="alert">
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                             <h2><b>Concurso Público da Prefeitura de Sertânia-PE 2019</b></h2> 
@@ -20,7 +20,7 @@
                </div>
             </div>
             <div class="col-sm-6">
-               <div class="container">
+               <div class="">
                     <div class="alert alert-danger alert-dismissible text-center" role="alert">
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                             <a href="http://tenosoftsistemas.com.br/portal/v81/indexent/indexent.php?entidade=210&idoc=covid" target="_blank"><h2><b>Transparência COVID-19</b></h2> </a>
