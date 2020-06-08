@@ -55,4 +55,14 @@ class HomeController extends Controller
     public function transparencia() {
         return view('site.transparencia');
     }
+
+    public function mapaSite() {
+        return view('site.mapa-site');
+    }
+    public function glossario() {
+        return view('site.glossario');
+    }
+    public function acessibilidade() {
+        return view('site.acessibilidade');
+    }
 }

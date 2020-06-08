@@ -34,6 +34,9 @@ Route::get('/noticias', 'NoticiasHomeController@noticiasLista')->name('noticias'
 Route::get('/noticia/{id}/{slug}', 'NoticiasHomeController@leitura')->name('noticias-ler');
 
 
+Route::get('/acessibilidade', 'HomeController@acessibilidade')->name('acessibilidade');
+Route::get('/mapa-site', 'HomeController@mapaSite')->name('mapa-site');
+Route::get('/glossario', 'HomeController@glossario')->name('glossario');
 Route::get('/cidade', 'HomeController@cidade')->name('cidade');
 Route::get('/dados', 'HomeController@dados')->name('dados');
 Route::get('/hino', 'HomeController@hino')->name('hino');

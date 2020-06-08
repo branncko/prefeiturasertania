@@ -53,6 +53,7 @@
                         <li><a href="https://www.tributosmunicipais.com.br/NFE-sertania/" alt="Nota Fiscal Eletrônica" target="_blank">Nota Fiscal Eletrônica</a></li>
                         <li><a href="http://gestor.tributosmunicipais.com.br/sertania/views/publico/portaldocontribuinte" alt="Portal do Contribuinte" target="_blank">Portal do Contribuinte</a></li>
                        <!-- <li><a href="http://gecea.sertania.pe.gov.br" alt="Sistema GECEA" target="_blank">Sistema</a></li> -->
+                        <li><a href="{{route('mapa-site')}}" alt="Mapa do Site">Mapa do Site</a></li>
                         <li><a href="http://www.sertania.pe.gov.br/webmail" alt="WebMail" target="_blank">WebMail</a></li>
                     </ul>
 
@@ -118,6 +119,25 @@
     </section><!-- / #ccr-nav-below-main -->
 
 </header>
+
+<div class="container">
+    <div class="acessibilidade">
+        <ul class="list-inline mb-0 d-flex justify-content-end no-ch">
+    
+             
+    
+            <li><a class="badge badge-light theme-text-color" href="{{route('acessibilidade')}}" accesskey="1">Acessibilidade</a></li>
+            <li><a class="badge badge-light theme-text-color" href="{{route('glossario')}}" accesskey="1">Glossário</a></li>
+            <li><a class="dec-font badge badge-light theme-text-color" href="javascript:void(0);" accesskey="5">A-</a></li>
+       
+            <li><a class="inc-font badge badge-light theme-text-color" href="javascript:void(0);" accesskey="6">A+</a></li>  
+    
+           
+    
+          </ul>
+    
+    </div>
+</div>
 
 @yield('content_index')
 
@@ -221,7 +241,110 @@
   ga('send', 'pageview');
 
 </script>
+<script>
+ 
+function changeFont(s) {
 
+    if (s === 'inc') {
+        var body = $("body").css('font-size');
+        $("body").animate({'font-size' : (parseInt(body) +1) + 'px'});
+        
+        var label = $("label").css('font-size');
+        $("label").animate({'font-size' : (parseInt(label) +1) + 'px'});
+        
+        var select = $("select").css('font-size');
+        $("select").animate({'font-size' : parseInt((select) +1) + 'px'});
+        
+        var textarea = $("textarea").css('font-size');
+        $("textarea").animate({'font-size' : parseInt((textarea) +1) + 'px'});
+        
+        var input = $("input").css('font-size');
+        $("input").animate({'font-size' : (parseInt(input) +1) + 'px'});
+
+        var navbar_inverse = $(".navbar-inverse").css('font-size');
+        $(".navbar-inverse").animate({'font-size' : (parseInt(navbar_inverse) +1) + 'px'});
+        
+        var h5 = $("h5").css('font-size');
+        $("h5").animate({'font-size' : (parseInt(h5) +1) + 'px'});
+        
+        var h4 = $("h4").css('font-size');
+        $("h4").animate({'font-size' : (parseInt(h4) +1) + 'px'});
+        
+        var h3 = $("h3").css('font-size');
+        $("h3").animate({'font-size' : (parseInt(h3) +1) + 'px'});
+        
+        var h1 = $("h1").css('font-size');
+        $("h1").animate({'font-size' : (parseInt(h1) +1) + 'px'});
+        
+        var h2 = $("h2").css('font-size');
+        $("h2").animate({'font-size' : (parseInt(h2) +1) + 'px'});
+        
+        var p = $("p").css('font-size');
+        $("p").animate({'font-size' : (parseInt(p) +1) + 'px'});
+        
+
+    }
+
+    if (s === 'dec') {
+        var body = $("body").css('font-size');
+        $("body").animate({'font-size' : (parseInt(body) -1) + 'px'});
+        
+        var label = $("label").css('font-size');
+        $("label").animate({'font-size' : (parseInt(label) -1) + 'px'});
+        
+        var select = $("select").css('font-size');
+        $("select").animate({'font-size' : parseInt((select) -1) + 'px'});
+        
+        var textarea = $("textarea").css('font-size');
+        $("textarea").animate({'font-size' : parseInt((textarea) -1) + 'px'});
+        
+        var input = $("input").css('font-size');
+        $("input").animate({'font-size' : (parseInt(input) -1) + 'px'});
+
+        var navbar_inverse = $(".navbar_inverse").css('font-size');
+        $(".navbar-inverse").animate({'font-size': (parseInt(navbar_inverse) -1) + 'px'});
+     
+        var h5 = $("h5").css('font-size');
+        $("h5").animate({'font-size' : (parseInt(h5) -1) + 'px'});
+        
+        var h4 = $("h4").css('font-size');
+        $("h4").animate({'font-size' : (parseInt(h4) -1) + 'px'});
+        
+        var h3 = $("h3").css('font-size');
+        $("h3").animate({'font-size' : (parseInt(h3) -1) + 'px'});
+        
+        var h1 = $("h1").css('font-size');
+        $("h1").animate({'font-size' : (parseInt(h1) -1) + 'px'});
+        
+        var h2 = $("h2").css('font-size');
+        $("h2").animate({'font-size' : (parseInt(h2) -1) + 'px'});
+        
+        var p = $("p").css('font-size');
+        $("p").animate({'font-size' : (parseInt(p) -1) + 'px'});
+
+    }
+    
+    // $(".btn:not(button)").animate({'font-size' :  + 'px'});
+    // $(".megamenu").animate({'font-size' :  + 'px'});
+	// $("select, textarea, input, .btn").animate({'min-height' : (f16*2) + 'px'});
+	// $("h5:not('.no-ch'),.h5,.lead").animate({'font-size' : f18 + 'px'});
+	// $("ul:not('.no-ch'),table,p:not('.lead')").animate({'font-size' : f14 + 'px'});
+	// $("h4, h3, h1, h2, p").animate({'font-size' : f12 + 'px'});
+}
+ 
+
+$(".inc-font").click(function (event) {
+		event.preventDefault();
+		changeFont('inc');
+	});
+	//diminuindo a fonte
+	$(".dec-font").click(function (event) {
+		event.preventDefault();
+		changeFont('dec');
+	});
+ 
+
+</script>
 @yield('content_index_js')
 
 
