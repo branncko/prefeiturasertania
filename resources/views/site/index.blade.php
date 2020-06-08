@@ -49,12 +49,12 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <div class="col-md-12">
                     <ul class="nav navbar-nav">
-                        <li><a href="https://tenosoftsistemas.com.br/transparencia/pe/sertania/" alt="Portal da Tranparência"  target="_blank">Portal da Transparência</a></li>
-                        <li><a href="https://www.tributosmunicipais.com.br/NFE-sertania/" alt="Nota Fiscal Eletrônica" target="_blank">Nota Fiscal Eletrônica</a></li>
-                        <li><a href="http://gestor.tributosmunicipais.com.br/sertania/views/publico/portaldocontribuinte" alt="Portal do Contribuinte" target="_blank">Portal do Contribuinte</a></li>
+                        <li><a href="https://tenosoftsistemas.com.br/transparencia/pe/sertania/" alt="Portal da Tranparência"  accesskey="1" target="_blank">Portal da Transparência</a></li>
+                        <li><a href="https://www.tributosmunicipais.com.br/NFE-sertania/" alt="Nota Fiscal Eletrônica"  accesskey="2" target="_blank">Nota Fiscal Eletrônica</a></li>
+                        <li><a href="http://gestor.tributosmunicipais.com.br/sertania/views/publico/portaldocontribuinte"  accesskey="3" 3alt="Portal do Contribuinte" target="_blank">Portal do Contribuinte</a></li>
                        <!-- <li><a href="http://gecea.sertania.pe.gov.br" alt="Sistema GECEA" target="_blank">Sistema</a></li> -->
-                        <li><a href="{{route('mapa-site')}}" alt="Mapa do Site">Mapa do Site</a></li>
-                        <li><a href="http://www.sertania.pe.gov.br/webmail" alt="WebMail" target="_blank">WebMail</a></li>
+                        <li><a href="{{route('mapa-site')}}"  accesskey="4" alt="Mapa do Site">Mapa do Site</a></li>
+                        <li><a href="http://www.sertania.pe.gov.br/webmail"  accesskey="5" alt="WebMail" target="_blank">WebMail</a></li>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
@@ -62,7 +62,7 @@
                             <form class="navbar-form navbar-right" role="search" method="post" action="{!! route('noticias-busca') !!}">
                                 {!! csrf_field() !!}
                                 <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Pesquisar…" value="" name="busca">
+                                    <input type="text" class="form-control"  accesskey="6" placeholder="Pesquisar…" value="" name="busca">
                                     <span class="input-group-btn">
                                         <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
                                     </span>
@@ -81,28 +81,24 @@
         <div class="container">
             <div class="row">
 
-
                 <div class="hidden-xs hidden-sm">
 
-
-
                     <div class="site-logo float-left col-md-3">
-                        <a href="{!! route('home') !!}">
+                        <a href="{!! route('home') !!}"  accesskey="0">
                             <img src="{!! asset('imagens/logoprefeitura.png') !!}" alt="Side Logo" style="padding-top: 0px; max-height: 100px;" data-pin-nopin="true">
                         </a>
                     </div>
 
-
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
                         <ul class="nav nav-pills " style="padding-top: 25px;">
 
-                            <li><a class="cidade" href="{!! route('cidade') !!}" >A CIDADE</a></li>
-                            <li><a class="cidade" href="{!! route('prefeitura') !!}" >A PREFEITURA</a></li>
-                            <li><a class="secretarias" href="{!! route('secretarias') !!}" >SECRETARIAS</a></li>
-                            <li><a class="orgaos" href="{!! route('orgaos') !!}" >ORGÃOS</a></li>
-                            <li><a class="downloads" href="{!! route('downloads') !!}" >DOWNLOADS</a></li>
-                            <li><a class="editais" href="{!! route('editais') !!}" >EDITAIS</a></li>
-                            <li><a class="noticias" href="{!! route('noticias') !!}" >NOTÍCIAS</a></li>
+                            <li><a  accesskey="q" class="cidade" href="{!! route('cidade') !!}" >A CIDADE</a></li>
+                            <li><a  accesskey="w" class="cidade" href="{!! route('prefeitura') !!}" >A PREFEITURA</a></li>
+                            <li><a  accesskey="e" class="secretarias" href="{!! route('secretarias') !!}" >SECRETARIAS</a></li>
+                            <li><a  accesskey="r" class="orgaos" href="{!! route('orgaos') !!}" >ORGÃOS</a></li>
+                            <li><a  accesskey="t" class="downloads" href="{!! route('downloads') !!}" >DOWNLOADS</a></li>
+                            <li><a  accesskey="y" class="editais" href="{!! route('editais') !!}" >EDITAIS</a></li>
+                            <li><a  accesskey="u" class="noticias" href="{!! route('noticias') !!}" >NOTÍCIAS</a></li>
 
                         </ul> <!-- /.nav /.navbar-nav -->
 
@@ -126,11 +122,11 @@
     
              
     
-            <li><a class="badge badge-light theme-text-color" href="{{route('acessibilidade')}}" accesskey="1">Acessibilidade</a></li>
-            <li><a class="badge badge-light theme-text-color" href="{{route('glossario')}}" accesskey="1">Glossário</a></li>
-            <li><a class="dec-font badge badge-light theme-text-color" href="javascript:void(0);" accesskey="5">A-</a></li>
+            <li><a class="badge badge-light theme-text-color" href="{{route('acessibilidade')}}" accesskey="a">Acessibilidade</a></li>
+            <li><a class="badge badge-light theme-text-color" href="{{route('glossario')}}" accesskey="g">Glossário</a></li>
+            <li><a class="dec-font badge badge-light theme-text-color" href="javascript:void(0);" accesskey="-">A-</a></li>
        
-            <li><a class="inc-font badge badge-light theme-text-color" href="javascript:void(0);" accesskey="6">A+</a></li>  
+            <li><a class="inc-font badge badge-light theme-text-color" href="javascript:void(0);" accesskey="+">A+</a></li>  
     
            
     
