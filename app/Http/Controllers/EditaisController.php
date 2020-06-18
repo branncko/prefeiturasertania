@@ -256,18 +256,13 @@ class EditaisController extends Controller
 
         $editaisPrimeira = Editais::where('deleted_at', null)->first();
 
-        return view('site.editais', compact('editais', 'editaisPrimeira'));
+        $breadcrumb = [
+            ['texto' => 'Home', 'link' => 'home', 'active' => false],
+            ['texto' => 'Editais', 'link' => ''  , 'active' =>true ],
+        ];
+
+        return view('site.editais', compact('editais', 'editaisPrimeira','breadcrumb'));
     }
-
-    public function homeOne($id) {
-
-        $editais = Editais::all();
-
-        $editaisPrimeira = Editais::find($id);
-
-        return view('site.editais', compact('editais', 'editaisPrimeira'));
-    }
-
 
     public function getFile($id) {
 

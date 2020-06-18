@@ -4119,13 +4119,13 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   }
 }
 .breadcrumb {
-  padding: 12px 15px;
+  padding: 6px 9px;
   padding-left: 30px;
   margin-bottom: 23px;
   list-style: none;
-  background-color: #414141;
+  
   border-radius: 2px;
-  border-left: 5px solid #082811;
+  border-left: 5px solid #CC0000;
 }
 .breadcrumb > li {
   display: inline-block;
@@ -4135,14 +4135,17 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   padding: 0 5px;
   color: #aaaaaa;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 11px!important;
 }
 .breadcrumb > li a {
   text-decoration: none !important;
+  
+  font-size: 11px!important;
 }
-.breadcrumb > .active {
-  color: #ffffff;
-  font-size: 25.2px;
+.breadcrumb > .active, .breadcrumb > .active a {
+  color: #CC0000;
+  font-size: 13px;
+  font-weight: 600;
 }
 .breadcrumb.breadcrumb-divider-middot > li + li:before {
   content: "\00b7\00a0";

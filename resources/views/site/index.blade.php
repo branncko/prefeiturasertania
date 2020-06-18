@@ -135,6 +135,16 @@
     </div>
 </div>
 
+@if(isset($breadcrumb))
+<div class="container">
+    <ol class="breadcrumb">
+        @foreach($breadcrumb as $link)
+        <li @if($link['active']) class="active" @endif> @if(!$link['active']) <a href="{{route($link['link'])}}"> @endif {{$link['texto']}} @if(!$link['active'])</a>@endif</li>
+        
+        @endforeach
+    </ol>
+</div>
+@endif
 @yield('content_index')
 
 

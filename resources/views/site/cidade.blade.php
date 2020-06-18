@@ -2,7 +2,6 @@
 
 @section('content_index')
     <div class="container">
-
         <div class="row">
             <!-- Slider -->
             <div class="col-sm-8 col-lg-8">

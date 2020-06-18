@@ -28,28 +28,68 @@ class HomeController extends Controller
 
 
     public function cidade() {
-        return view('site.cidade');
+        $breadcrumb = [
+            ['texto' => 'Home', 'link' => 'home', 'active' => false],
+            ['texto' => 'A Cidade / História', 'link' => ''  , 'active' =>true ],
+            
+        ];
+        return view('site.cidade', compact('breadcrumb'));
     }
     public function dados() {
-        return view('site.dados');
+        $breadcrumb = [
+            ['texto' => 'Home', 'link' => 'home', 'active' => false],
+            ['texto' => 'A Cidade', 'link' => 'cidade'  , 'active' =>false ],
+            ['texto' => 'Dados', 'link' => ''  , 'active' =>true ],
+            
+        ];
+        return view('site.dados', compact('breadcrumb'));
     }
     public function hino() {
-        return view('site.hino');
+        $breadcrumb = [
+            ['texto' => 'Home', 'link' => 'home', 'active' => false],
+            ['texto' => 'A Cidade', 'link' => 'cidade'  , 'active' =>false ],
+            ['texto' => 'Hino', 'link' => ''  , 'active' =>true ],
+            
+        ];
+        return view('site.hino', compact('breadcrumb'));
     }
     public function exprefeitos() {
-        return view('site.exprefeitos');
+        $breadcrumb = [
+            ['texto' => 'Home', 'link' => 'home', 'active' => false],
+            ['texto' => 'A Cidade', 'link' => 'cidade'  , 'active' =>false ],
+            ['texto' => 'Ex-Prefeitos', 'link' => ''  , 'active' =>true ],
+            
+        ];
+        return view('site.exprefeitos', compact('breadcrumb'));
     }
 
     public function simbolos() {
-        return view('site.simbolos');
+        $breadcrumb = [
+            ['texto' => 'Home', 'link' => 'home', 'active' => false],
+            ['texto' => 'A Cidade', 'link' => 'cidade'  , 'active' =>false ],
+            ['texto' => 'Simbolos', 'link' => ''  , 'active' =>true ],
+            
+        ];
+        return view('site.simbolos', compact('breadcrumb'));
     }
 
   public function prefeito() {
-        return view('site.prefeitura');
+      $breadcrumb = [
+            ['texto' => 'Home', 'link' => 'home', 'active' => false],
+            ['texto' => 'A Prefeitura / Prefeito', 'link' => 'prefeitura'  , 'active' =>true ],
+            
+            
+        ];
+        return view('site.prefeitura', compact('breadcrumb'));
     }
 
     public function viceprefeito() {
-        return view('site.viceprefeito');
+        $breadcrumb = [
+            ['texto' => 'Home', 'link' => 'home', 'active' => false],
+            ['texto' => 'A Prefeitura', 'link' => 'prefeitura'  , 'active' =>false ],
+            ['texto' => 'Vice-Prefeito', 'link' => 'viceprefeito'  , 'active' =>true ],
+        ];
+        return view('site.viceprefeito', compact('breadcrumb'));
     }
 
     public function transparencia() {
@@ -57,12 +97,24 @@ class HomeController extends Controller
     }
 
     public function mapaSite() {
-        return view('site.mapa-site');
+        $breadcrumb = [
+            ['texto' => 'Home', 'link' => 'home', 'active' => false],
+            ['texto' => 'Mapa do Site', 'link' => ''  , 'active' =>true ],
+        ];
+        return view('site.mapa-site', compact('breadcrumb'));
     }
     public function glossario() {
-        return view('site.glossario');
+        $breadcrumb = [
+            ['texto' => 'Home', 'link' => 'home', 'active' => false],
+            ['texto' => 'Glossário', 'link' => ''  , 'active' =>true ],
+        ];
+        return view('site.glossario', compact('breadcrumb'));
     }
     public function acessibilidade() {
-        return view('site.acessibilidade');
+        $breadcrumb = [
+            ['texto' => 'Home', 'link' => 'home', 'active' => false],
+            ['texto' => 'Acessibilidade', 'link' => ''  , 'active' =>true ],
+        ];
+        return view('site.acessibilidade', compact('breadcrumb'));
     }
 }

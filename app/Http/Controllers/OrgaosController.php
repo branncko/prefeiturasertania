@@ -209,11 +209,16 @@ class OrgaosController extends Controller
 
     public function home() {
 
+         
         $orgaos = Orgaos::all();
 
         $orgaosPrimeira = Orgaos::where('deleted_at', null)->first();
-
-        return view('site.orgaos', compact('orgaos', 'orgaosPrimeira'));
+        $breadcrumb = [
+            ['texto' => 'Home', 'link' => 'home', 'active' => false],
+            ['texto' => 'Orgãos', 'link' => 'orgaos'  , 'active' =>false ],
+            ['texto' => $orgaosPrimeira->titulo, 'link' => ''  , 'active' =>true ],
+        ];
+        return view('site.orgaos', compact('orgaos', 'orgaosPrimeira','breadcrumb'));
     }
 
     public function homeOne($id) {
@@ -221,8 +226,12 @@ class OrgaosController extends Controller
         $orgaos = Orgaos::all();
 
         $orgaosPrimeira = Orgaos::find($id);
-
-        return view('site.orgaos', compact('orgaos', 'orgaosPrimeira'));
+        $breadcrumb = [
+            ['texto' => 'Home', 'link' => 'home', 'active' => false],
+            ['texto' => 'Orgãos', 'link' => 'orgaos'  , 'active' =>false ],
+            ['texto' => $orgaosPrimeira->titulo, 'link' => ''  , 'active' =>true ],
+        ];
+        return view('site.orgaos', compact('orgaos', 'orgaosPrimeira','breadcrumb'));
     }
 
 }

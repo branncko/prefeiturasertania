@@ -27,6 +27,8 @@ class NoticiasController extends Controller
     {
         $noticias = Noticias::orderBy('id','desc')->paginate(20);
 
+       
+
         return view("admin.noticias-listar", compact("noticias"));
     }
 
