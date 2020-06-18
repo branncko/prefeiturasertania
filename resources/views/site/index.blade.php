@@ -28,7 +28,7 @@
 <header id="ccr-header">
 
 
-    <nav class="navbar navbar-inverse navbar-static-top" style="border-bottom: 2px solid #CC0000; margin-bottom: 0;">
+    <nav class="navbar navbar-inverse navbar-static-top navbarprefeitura" >
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -123,6 +123,7 @@
              
     
             <li><a class="badge badge-light theme-text-color" href="{{route('acessibilidade')}}" accesskey="a">Acessibilidade</a></li>
+            <li><a class="badge badge-light theme-text-color alteracontraste" href="javascript:void(0);" accesskey="c">Contraste <span class="badge-on"><span class="iconecontraste fa fa-toggle-off"  aria-hidden="true"></span></span></a></li>
             <li><a class="badge badge-light theme-text-color" href="{{route('glossario')}}" accesskey="g">Glossário</a></li>
             <li><a class="dec-font badge badge-light theme-text-color" href="javascript:void(0);" accesskey="-">A-</a></li>
        
@@ -349,6 +350,19 @@ $(".inc-font").click(function (event) {
 		changeFont('dec');
 	});
  
+ $('.alteracontraste').click(function(event) {
+    event.preventDefault();
+    document.documentElement.classList.toggle('contrastesite');
+
+    if ( $(".iconecontraste").hasClass('fa-toggle-off') ) {
+        $(".iconecontraste").removeClass('fa-toggle-off')
+        $(".iconecontraste").addClass('fa-toggle-on')
+    } else {
+        $(".iconecontraste").removeClass('fa-toggle-on')
+        $(".iconecontraste").addClass('fa-toggle-off')
+    }
+    
+ })
 
 </script>
 @yield('content_index_js')

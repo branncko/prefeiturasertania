@@ -8143,3 +8143,52 @@ button[type="submit"],
     width: 100%;
 
   }
+  .badge-on {
+    padding: 1px;
+    color: #d4ffb1;
+  }
+  .navbarprefeitura {
+    border-bottom: 2px solid #CC0000!important; margin-bottom: 0!important;
+  }
+
+  /*AlTO CONTRASTE*/
+  .contrastesite,
+.contrastesite nav:not(.light),
+.contrastesite div:not(.light),
+.contrastesite li:not(.light),
+.contrastesite ol:not(.light),
+.contrastesite header:not(.light),
+.contrastesite footer:not(.light),
+.contrastesite section:not(.light),
+.contrastesite main,
+.contrastesite aside,
+.contrastesite article,
+.contrastesite table:not(.light) {
+    background: black !important;
+    color: white !important;
+	border-color: white !important;
+}
+.contrastesite h1,
+.contrastesite h2,
+.contrastesite h3,
+.contrastesite h4,
+.contrastesite h5,
+.contrastesite h6,
+.contrastesite p,
+.contrastesite label,
+.contrastesite strong,
+.contrastesite em,
+.contrastesite cite,
+.contrastesite q,
+.contrastesite i,
+.contrastesite b,
+.contrastesite u,
+.contrastesite span:not(.badge-light) {
+    color: white !important;
+}
+.contrastesite a{
+    color: yellow !important;
+}
+.contrastesite body {
+  background-color: #000;
+}

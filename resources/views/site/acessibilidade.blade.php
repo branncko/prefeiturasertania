@@ -104,6 +104,10 @@
                                     <td>Glossário</td>
                                 </tr>
                                 <tr>
+                                    <td>ALT + C</td>
+                                    <td>Contraste</td>
+                                </tr>
+                                <tr>
                                     <td>ALT + -</td>
                                     <td>Diminuir Fonte</td>
                                 </tr>
