@@ -12,15 +12,10 @@
         <div class="row">
             <div class="container">
                 <div class="col-sm-6">
-                    <div class="alert alert-danger alert-dismissible text-center" role="alert">
-                            <h2><b>Concurso Público da Prefeitura de Sertânia-PE 2019</b></h2> 
-                            <p><small><a href="{!! route('downloads') !!}">Publicações na aba Download</a></small></p>
-                    </div>
+                    
             </div>
             <div class="col-sm-6">
-                    <div class="alert alert-danger alert-dismissible text-center" role="alert">
-                            <a href="http://tenosoftsistemas.com.br/portal/v81/indexent/indexent.php?entidade=210&idoc=covid" target="_blank"><h2><b>Transparência COVID-19</b></h2> </a>
-                    </div>
+                  
             </div>
             </div>
         </div>
@@ -30,58 +25,7 @@
             <div class="col-sm-6 col-lg-6">
 
                 <div class="container">
-                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-
-                        <!-- Wrapper for slides -->
-                        <div class="carousel-inner">
-
-                            <?php $ic=0; ?>
-                            @foreach($noticiasCarousel as $noticiacarousel)
-                                <div class="item @if($ic == 0) active @endif">
-
-                                    <?php if ( substr($noticiacarousel->photo, 0 , 4) == 'http' ) { ?>
-                                    <img src="{!!  $noticiacarousel->photo !!}" alt="img" class="img-thumbnail img-responsive" width="760" height="400" />
-                                    <?php } else { ?>
-                                        <img src="{!! route('arquivo-carousel',$noticiacarousel->id) !!}">
-                                    <?php } ?>
-
-
-
-                                    <div class="carousel-caption">
-                                        <h4><a href="{!! route('noticias-ler',[$noticiacarousel->id,$noticiacarousel->slug]) !!}">{!! $noticiacarousel->title !!}</a></h4>
-                                        <p>{!! $noticiacarousel->sobre !!}</p>
-                                    </div>
-                                </div><!-- End Item -->
-                                <?php $ic++; ?>
-                            @endforeach
-
-
-
-                        </div><!-- End Carousel Inner -->
-
-
-                        <ul class="list-group col-sm-4">
-                            <?php $ic=0; ?>
-                            @foreach($noticiasCarousel as $noticiacarousel)
-                                <li data-target="#myCarousel" data-slide-to="{!! $ic !!}" class="list-group-item @if($ic==0) active @endif">
-                                    <h5 class="media-heading">{!! $noticiacarousel->categorias->name !!}</h5>
-                                    <h4>{!! $noticiacarousel->title !!}</h4>
-                                </li>
-                                <?php $ic++; ?>
-                            @endforeach
-                        </ul>
-
-                        <!-- Controls -->
-                        <div class="carousel-controls">
-                            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                                <span class="fa fa-chevron-left"></span>
-                            </a>
-                            <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                                <span class="fa fa-chevron-right"></span>
-                            </a>
-                        </div>
-
-                    </div><!-- End Carousel -->
+                   
                 </div>
 
             </div>
@@ -91,45 +35,12 @@
 
 
         <div class="col-md-8 col-lg-8"  data-effect="slide-right">
-            <ul class="media-list">
-                @foreach($noticiasMais as $noticiasMaisUni)
-
-                    <li class="media">
-                        <a class="pull-left" href="{!! route('noticias-ler',[$noticiasMaisUni->id,$noticiasMaisUni->slug]) !!}" style="width: 74px; height: 74px;">
-
-                            <?php if ( substr($noticiasMaisUni->photo, 0 , 4) == 'http' ) { ?>
-                            <img src="{!!  $noticiasMaisUni->photo !!}" alt="img" class="img-thumbnail img-responsive" width="760" height="400" />
-                            <?php } else { ?>
-                            <img src="{!! route('arquivo-carousel',$noticiasMaisUni->id) !!}">
-                            <?php } ?>
-
-
-                            {{--<img class="media-object img-thumbnail"   src="{!! route('arquivo-chamadinhas',$noticiasMaisUni->id) !!}">--}}
-                        </a>
-                        <div class="media-body">
-                            <h5 class="media-heading">{!! $noticiasMaisUni->categorias->name !!}</h5>
-                            <h4><a href="{!! route('noticias-ler',[$noticiasMaisUni->id,$noticiasMaisUni->slug]) !!}">{!! $noticiasMaisUni->title !!} <span class="badge"><i class="fa fa-eye"></i> {!! $noticiasMaisUni->visualizado !!}</span></a> <a href="whatsapp://send?text={!! $noticiasMaisUni->title !!} {!! route('noticias-ler',[$noticiasMaisUni->id,$noticiasMaisUni->slug]) !!}" data-action="share/whatsapp/share" class="btn btn-success btn-xs"><i class="fa fa-whatsapp"></i></a></h4>
-                        </div>
-
-                    </li>
-                @endforeach
-            </ul>
-
-
-
-            <div class="row">
-                @foreach($publicidades as $campanha)
-
-                    <div class="col-lg-6 col-sm-6 ">
-                        <a href="@if($campanha->link != null) {!! $campanha->link !!} @else javascript:void(0); @endif" class="thumbnail">
-
-
-
-                            <img src="{!! route('arquivo-campanha', $campanha->id) !!}" alt="">
-
-                        </a>
-                    </div>
-                @endforeach
+            <div class="alert alert-danger alert-dismissible text-center" role="alert">
+                <h2><b>Concurso Público da Prefeitura de Sertânia-PE 2019</b></h2> 
+                <p><small><a href="{!! route('downloads') !!}">Publicações na aba Download</a></small></p>
+        </div>
+            <div class="alert alert-danger alert-dismissible text-center" role="alert">
+                <a href="http://tenosoftsistemas.com.br/portal/v81/indexent/indexent.php?entidade=210&idoc=covid" target="_blank"><h2><b>Transparência COVID-19</b></h2> </a>
             </div>
         </div>
 
