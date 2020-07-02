@@ -117,4 +117,12 @@ class HomeController extends Controller
         ];
         return view('site.acessibilidade', compact('breadcrumb'));
     }
+
+    public function cadastroArtistico() {
+        $breadcrumb = [
+            ['texto' => 'Home', 'link' => 'home', 'active' => false],
+            ['texto' => 'Cadastro Artístico Cultural', 'link' => ''  , 'active' =>true ],
+        ];
+        return view('site.cadastroartistico', compact('breadcrumb'));
+    }
 }

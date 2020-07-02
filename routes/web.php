@@ -15,6 +15,7 @@ Route::get('/', 'NoticiasHomeController@index')->name('home');
 Route::get('/index', 'NoticiasHomeController@index')->name('index');
 Route::get('/home', 'NoticiasHomeController@index')->name('home');
 Route::get('/transparencia', 'HomeController@transparencia')->name('transparencia');
+Route::get('/cadastro-artistico', 'HomeController@cadastroArtistico')->name('cadastro-artistico');
 
 //Route::get('/gerarSenha', function() {
 //    return bcrypt('270287');
