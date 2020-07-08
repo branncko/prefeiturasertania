@@ -57,7 +57,7 @@
                         <li><a href="http://www.sertania.pe.gov.br/webmail"  accesskey="5" alt="WebMail" target="_blank">WebMail</a></li>
                     </ul>
 
-                    {{-- <ul class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-nav navbar-right">
                         <li>
                             <form class="navbar-form navbar-right" role="search" method="post" action="{!! route('noticias-busca') !!}">
                                 {!! csrf_field() !!}
@@ -69,7 +69,7 @@
                                 </div>
                             </form>
                         </li>
-                    </ul> --}}
+                    </ul>
                 </div><!-- /.col-md-12 -->
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
@@ -98,7 +98,7 @@
                             <li><a  accesskey="r" class="orgaos" href="{!! route('orgaos') !!}" >ORGÃOS</a></li>
                             <li><a  accesskey="t" class="downloads" href="{!! route('downloads') !!}" >DOWNLOADS</a></li>
                             <li><a  accesskey="y" class="editais" href="{!! route('editais') !!}" >EDITAIS</a></li>
-                            {{-- <li><a  accesskey="u" class="noticias" href="{!! route('noticias') !!}" >NOTÍCIAS</a></li> --}}
+                            <li><a  accesskey="u" class="noticias" href="{!! route('noticias') !!}" >NOTÍCIAS</a></li>
 
                         </ul> <!-- /.nav /.navbar-nav -->
 
