@@ -161,6 +161,7 @@
 <p>Hora: 30 jul 2020 11:00 AM São Paulo</p>
 
 <p>ID da reunião: 822 3829 9903</p>
+<p>SENHA DE ACESSO: 241658</p>
 <p><a href="https://us02web.zoom.us/j/82238299903?pwd=blJCTzZ1UWlWRnA4d2d2cDZlc2w5UT09" class="btn btn-success btn-xs">Entrar na reunião Zoom</a></p>
                 </div>
 
