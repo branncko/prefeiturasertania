@@ -11,6 +11,7 @@
 
         <div class="row">
             <div class="container">
+               
                 <div class="col-sm-6">
                     <div class="alert alert-danger alert-dismissible text-center" role="alert">
                             <h2><b>Concurso Público da Prefeitura de Sertânia-PE 2019</b></h2> 
@@ -145,6 +146,27 @@
     </div>
 
 
+<div class="modal fade " id="modalLicitacao" tabindex="-1" role="dialog">--}}
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h2 class="modal-title"><strong>Licitação</strong></h2>
+                </div>
+                <div class="modal-body">
+
+                    <p><strong>Setor de Licitação está convidando você para uma reunião Zoom agendada.</strong></p>
+
+<p>Tópico: CHAMADA PUBLICA 001/2020 - SETOR DE LICITAÇÃO SERTANIA-PE</p>
+<p>Hora: 30 jul 2020 11:00 AM São Paulo</p>
+
+<p>ID da reunião: 822 3829 9903</p>
+<p><a href="https://us02web.zoom.us/j/82238299903?pwd=blJCTzZ1UWlWRnA4d2d2cDZlc2w5UT09" class="btn btn-success btn-xs">Entrar na reunião Zoom</a></p>
+                </div>
+
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 
     {{--<div class="modal fade" id="modalMedicos" tabindex="-1" role="dialog">--}}
         {{--<div class="modal-dialog" role="document">--}}
@@ -170,7 +192,7 @@
 @section('content_index_js')
     <script>
         $(document).ready(function(){
-            // $('#modalMedicos').modal('show');
+            $('#modalLicitacao').modal('show');
         });
     </script>
 @endsection
