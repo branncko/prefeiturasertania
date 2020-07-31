@@ -156,13 +156,12 @@
                 <div class="modal-body">
 
                     <p><strong>Setor de Licitação está convidando você para uma reunião Zoom agendada.</strong></p>
+                    <p>Tópico: TP - FUNDO MUNICIPAL DE EDUCACAO</p>
+                    <p>Hora: 31 jul 2020 10:00 AM São Paulo</p>
 
-<p>Tópico: CHAMADA PUBLICA 001/2020 - SETOR DE LICITAÇÃO SERTANIA-PE</p>
-<p>Hora: 30 jul 2020 11:00 AM São Paulo</p>
-
-<p>ID da reunião: 822 3829 9903</p>
-<p>SENHA DE ACESSO: 241658</p>
-<p><a href="https://us02web.zoom.us/j/82238299903?pwd=blJCTzZ1UWlWRnA4d2d2cDZlc2w5UT09" class="btn btn-success btn-xs">Entrar na reunião Zoom</a></p>
+                    <p>ID da reunião: 870 1017 5821</p>
+                    <p>SENHA DE ACESSO: 116969</p>
+                    <p><a href="https://us02web.zoom.us/j/87010175821?pwd=YTJDZllKYWcxbWw0QkZuaEhudGNxZz09" class="btn btn-success btn-xs">Entrar na reunião Zoom</a></p>
                 </div>
 
             </div><!-- /.modal-content -->
@@ -193,7 +192,7 @@
 @section('content_index_js')
     <script>
         $(document).ready(function(){
-//            $('#modalLicitacao').modal('show');
+           $('#modalLicitacao').modal('show');
         });
     </script>
 @endsection
