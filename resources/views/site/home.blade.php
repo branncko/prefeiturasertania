@@ -193,7 +193,7 @@
 @section('content_index_js')
     <script>
         $(document).ready(function(){
-            $('#modalLicitacao').modal('show');
+//            $('#modalLicitacao').modal('show');
         });
     </script>
 @endsection
