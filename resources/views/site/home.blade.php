@@ -156,12 +156,12 @@
                 <div class="modal-body">
 
                     <p><strong>Setor de Licitação está convidando você para uma reunião Zoom agendada.</strong></p>
-                    <p>Tópico: TP - FUNDO MUNICIPAL DE EDUCACAO</p>
-                    <p>Hora: 31 jul 2020 10:00 AM São Paulo</p>
+                    <p>Tópico: TP - 004/2020</p>
+                    <p>Hora: 3 ago 2020 11:00 AM São Paulo</p>
 
-                    <p>ID da reunião: 870 1017 5821</p>
-                    <p>SENHA DE ACESSO: 116969</p>
-                    <p><a href="https://us02web.zoom.us/j/87010175821?pwd=YTJDZllKYWcxbWw0QkZuaEhudGNxZz09" class="btn btn-success btn-xs">Entrar na reunião Zoom</a></p>
+                    <p>ID da reunião: 817 3777 7069</p>
+                    <p>SENHA DE ACESSO: 386502</p>
+                    <p><a href="https://us02web.zoom.us/j/81737777069?pwd=R2lXSGlqNU9VTmorMDRGc2szb0Zzdz09" class="btn btn-success btn-xs">Entrar na reunião Zoom</a></p>
                 </div>
 
             </div><!-- /.modal-content -->
