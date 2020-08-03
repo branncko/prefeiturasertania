@@ -23,11 +23,7 @@
                             <a href="http://tenosoftsistemas.com.br/portal/v81/indexent/indexent.php?entidade=210&idoc=covid" target="_blank"><h2><b>Transparência COVID-19</b></h2> </a>
                     </div>
                 </div>
-                <div class="col-sm-12">
-                    <div class="alert alert-warning alert-dismissible text-center" role="alert">
-                        <a href="{{route('cadastro-artistico')}}" target="_blank"><h2><b>Cadastro Artístico Cultural</b></h2> </a>
-                    </div>
-                </div>
+              
                 
             </div>
         </div>
