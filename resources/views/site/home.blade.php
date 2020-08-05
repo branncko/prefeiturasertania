@@ -153,7 +153,7 @@
 
                     <p><strong>Setor de Licitação está convidando você para uma reunião Zoom agendada.</strong></p>
                     <p>Tópico: TP - 006/2020</p>
-                    <p>Hora: 5 ago 2020 11:00 AM São Paulo</p>
+                    <p>Hora: 5 ago 2020 10:00 AM São Paulo</p>
 
                     <p>ID da reunião: 831 8496 7606</p>
                     <p>Senha de acesso: 966494</p>
