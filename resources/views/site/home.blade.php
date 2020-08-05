@@ -152,12 +152,12 @@
                 <div class="modal-body">
 
                     <p><strong>Setor de Licitação está convidando você para uma reunião Zoom agendada.</strong></p>
-                    <p>Tópico: TP - 004/2020</p>
-                    <p>Hora: 3 ago 2020 11:00 AM São Paulo</p>
+                    <p>Tópico: TP - 006/2020</p>
+                    <p>Hora: 5 ago 2020 11:00 AM São Paulo</p>
 
-                    <p>ID da reunião: 817 3777 7069</p>
-                    <p>SENHA DE ACESSO: 386502</p>
-                    <p><a href="https://us02web.zoom.us/j/81737777069?pwd=R2lXSGlqNU9VTmorMDRGc2szb0Zzdz09" class="btn btn-success btn-xs">Entrar na reunião Zoom</a></p>
+                    <p>ID da reunião: 831 8496 7606</p>
+                    <p>Senha de acesso: 966494</p>
+                    <p><a href="https://us02web.zoom.us/j/83184967606?pwd=V3ZPVG5GUStVQU9wVDRaWHp0NlhXZz09" class="btn btn-success btn-xs">Entrar na reunião Zoom</a></p>
                 </div>
 
             </div><!-- /.modal-content -->
