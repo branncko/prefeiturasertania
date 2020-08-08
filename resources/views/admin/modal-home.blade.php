@@ -40,6 +40,13 @@
 
                             </div>
                         </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-2 col-sm-2 col-xs-12">Texto Para Botão de Link</label>
+                            <div class="col-md-10 col-sm-10 col-xs-12">
+                                {!! Form::text('texto_link',old('texto_link') ,['class'=>'form-control']) !!}
+
+                            </div>
+                        </div>
 
 
                         <div class="form-group">

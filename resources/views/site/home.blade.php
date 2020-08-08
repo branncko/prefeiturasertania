@@ -154,7 +154,7 @@
 
                     {!!$modal->conteudo!!}
 
-                    @if($modal->link)<p><a href="{{$modal->link}}" class="btn btn-success btn-xs">Entrar na reunião Zoom</a></p>@endif
+                    @if($modal->link)<p><a href="{{$modal->link}}" class="btn btn-success btn-xs">{{$modal->texto_link}}</a></p>@endif
                 </div>
 
             </div><!-- /.modal-content -->

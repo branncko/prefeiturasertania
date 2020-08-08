@@ -15,7 +15,8 @@ class Modal extends Model
         'titulo',
         'conteudo',
         'liberado',
-        'link'];
+        'link',
+        'texto_link'];
     protected $dates = ['deleted_at','created_at','updated_at'];
 
 }
