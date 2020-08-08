@@ -142,22 +142,19 @@
     </div>
 
 
+    
 <div class="modal fade " id="modalLicitacao" tabindex="-1" role="dialog">--}}
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h2 class="modal-title"><strong>Licitação</strong></h2>
+                    <h2 class="modal-title"><strong>{{$modal->titulo}}</strong></h2>
                 </div>
                 <div class="modal-body">
 
-                    <p><strong>Setor de Licitação está convidando você para uma reunião Zoom agendada.</strong></p>
-                    <p>Tópico: TP - 006/2020</p>
-                    <p>Hora: 5 ago 2020 10:00 AM São Paulo</p>
+                    {!!$modal->conteudo!!}
 
-                    <p>ID da reunião: 831 8496 7606</p>
-                    <p>Senha de acesso: 966494</p>
-                    <p><a href="https://us02web.zoom.us/j/83184967606?pwd=V3ZPVG5GUStVQU9wVDRaWHp0NlhXZz09" class="btn btn-success btn-xs">Entrar na reunião Zoom</a></p>
+                    @if($modal->link)<p><a href="{{$modal->link}}" class="btn btn-success btn-xs">Entrar na reunião Zoom</a></p>@endif
                 </div>
 
             </div><!-- /.modal-content -->
@@ -186,9 +183,11 @@
 
 @endsection
 @section('content_index_js')
+@if($modal->liberado)
     <script>
         $(document).ready(function(){
            $('#modalLicitacao').modal('show');
         });
     </script>
+@endif
 @endsection

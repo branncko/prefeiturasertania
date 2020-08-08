@@ -140,6 +140,11 @@
                                     <li><a href="{!! route('videos-lista') !!}">Listar</a></li>
                                 </ul>
                             </li>
+                            <li><a><i class="fa fa-youtube"></i> Modais <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu" style="display: none">
+                                    <li><a href="{!! route('modal-home') !!}">Modal Home</a></li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                 </div>

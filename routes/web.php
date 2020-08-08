@@ -150,10 +150,13 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/videos/{id}','VideosController@show')->name('videos-mostra');
         Route::post('/videos/editar/{id}','VideosController@update')->name('videos-update');
         Route::get('/videos/deleta/{id}','VideosController@destroy')->name('videos-deleta');
-
-
+        
+        
+        
         Route::post('/uploadImagemCorpo','NoticiasController@uploadImagemCorpo')->name('upload-img');
-
+        
+        Route::get('/modal/home','ModalController@modalHome')->name('modal-home');
+        Route::post('/modal/home/{id}','ModalController@modalHomeSave')->name('modal-home-post');
 
 });
 

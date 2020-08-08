@@ -6,7 +6,7 @@ use App\Campanha;
 use App\Videos;
 use Illuminate\Http\Request;
 use App\Categorias;
-
+use App\Modal;
 use App\Noticias;
 
 use Illuminate\Support\Facades\Session;
@@ -27,7 +27,9 @@ class NoticiasHomeController extends Controller
         $publicidades = Campanha::all();
         $videoscinco = Videos::take(5)->get();
 
-        return view('site.home', compact('noticiasCarousel'), compact('noticiasMais','publicidades','videoscinco'));
+        $modal = Modal::find(1);
+ 
+        return view('site.home', compact('noticiasCarousel'), compact('noticiasMais','publicidades','videoscinco','modal'));
 
     }
 
