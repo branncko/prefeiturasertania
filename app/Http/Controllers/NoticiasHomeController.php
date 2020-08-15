@@ -42,6 +42,7 @@ class NoticiasHomeController extends Controller
         $noticias = Noticias::where('ativo',1)->orderBy('id','desc')->paginate(20);
         $videoscinco = Videos::take(5)->get();
 
+        abort(409, "Fora do Ar!");
         return view('site.noticias', compact('noticias','videoscinco',"breadcrumb"));
 
     }
@@ -59,7 +60,7 @@ class NoticiasHomeController extends Controller
             return redirect()->to(route("noticias"))->withErrors("Nenhum registro encontrado");
 
         }
-
+        abort(409, "Fora do Ar!");
         return view("site.noticias", compact("noticias","videoscinco","breadcrumb"));
 
     }
@@ -80,7 +81,7 @@ class NoticiasHomeController extends Controller
             ['texto' => $noticia->title, 'link' => ''  , 'active' =>true ],
         ];
         
-
+        abort(409, "Fora do Ar!");
         return view('site.noticia', compact('noticia','noticias',"breadcrumb"));
     }
 }
