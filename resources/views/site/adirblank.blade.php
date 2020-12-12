@@ -8,7 +8,7 @@
             <div class="col-sm-8 col-lg-8">
                 <div class="well">
 
-                        <h3>Lei Adir Blank</h3>
+                        <h3>Lei Adir Blanc</h3>
                         <h4>Sertânia</h4>
                         
                     <div class="article-like-comment-date">

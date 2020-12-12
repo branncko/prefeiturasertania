@@ -15,7 +15,7 @@ Route::get('/', 'NoticiasHomeController@index')->name('home');
 Route::get('/index', 'NoticiasHomeController@index')->name('index');
 Route::get('/home', 'NoticiasHomeController@index')->name('home');
 Route::get('/transparencia', 'HomeController@transparencia')->name('transparencia');
-Route::get('/adir-blank', 'HomeController@adirblank')->name('leiadir');
+Route::get('/adir-blanc', 'HomeController@adirblank')->name('leiadir');
 Route::get('/cadastro-artistico', 'HomeController@cadastroArtistico')->name('cadastro-artistico');
 
 //Route::get('/gerarSenha', function() {

@@ -99,7 +99,7 @@ class HomeController extends Controller
     public function adirblank() {
         $breadcrumb = [
             ['texto' => 'Home', 'link' => 'home', 'active' => false],
-            ['texto' => 'A Cidade / História', 'link' => ''  , 'active' =>true ],
+            ['texto' => 'Lei Adir Blanc', 'link' => ''  , 'active' =>true ],
             
         ];
         return view('site.adirblank', compact('breadcrumb'));
