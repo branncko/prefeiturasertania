@@ -96,6 +96,15 @@ class HomeController extends Controller
         return view('site.transparencia');
     }
 
+    public function adirblank() {
+        $breadcrumb = [
+            ['texto' => 'Home', 'link' => 'home', 'active' => false],
+            ['texto' => 'A Cidade / História', 'link' => ''  , 'active' =>true ],
+            
+        ];
+        return view('site.adirblank', compact('breadcrumb'));
+    }
+
     public function mapaSite() {
         $breadcrumb = [
             ['texto' => 'Home', 'link' => 'home', 'active' => false],
