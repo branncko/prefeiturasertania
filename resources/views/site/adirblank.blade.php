@@ -22,9 +22,21 @@
                     </div>
 
                    
-                    <p>Chamada 01/2020 + <a href="https://docs.google.com/forms/d/e/1FAIpQLSfHjdEHOoYSAlOn4wrVpAuyUbI8ppL6iWArDvdTkel2mhsZ1A/viewform" target="_Blank"> GoogleForms 1</a></p>
-                    <p>Chamada 02/2020 + <a href="https://docs.google.com/forms/d/e/1FAIpQLSfHjdEHOoYSAlOn4wrVpAuyUbI8ppL6iWArDvdTkel2mhsZ1A/viewform" target="_Blank"> GoogleForms 2</a></p>
-                    <p>Chamada 03/2020 + <a href="https://docs.google.com/forms/d/e/1FAIpQLSfHjdEHOoYSAlOn4wrVpAuyUbI8ppL6iWArDvdTkel2mhsZ1A/viewform" target="_Blank"> GoogleForms 3</a></p>
+                    <p>
+                        <h2><strong>Chamada 01/2020</strong></h2>
+                        <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSfHjdEHOoYSAlOn4wrVpAuyUbI8ppL6iWArDvdTkel2mhsZ1A/viewform" target="_Blank"> Cadastro Inciso II - Chamada Pública - 001/2020</a></p>
+                        <p><a href="http://sertania.pe.gov.br/downloads/100" target="_Blank"> Chamada Pública 002/2020 </a></p>
+                    </p>
+                    <p>
+                        <h2><strong>Chamada 02/2020</strong></h2>
+                        <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSfHjdEHOoYSAlOn4wrVpAuyUbI8ppL6iWArDvdTkel2mhsZ1A/viewform" target="_Blank"> Cadastro Inciso III - Chamada Pública - 002/2020</a></p>
+                        <p><a href="http://sertania.pe.gov.br/downloads/101" target="_Blank"> Chamada Pública 002/2020 </a></p>
+                    </p>
+                    <p>
+                        <h2><strong>Chamada 03/2020</strong></h2>
+                        <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSfHjdEHOoYSAlOn4wrVpAuyUbI8ppL6iWArDvdTkel2mhsZ1A/viewform" target="_Blank"> Cadastro Inciso III - Chamada Pública - 003/2020</a></p>
+                        <p><a href="http://sertania.pe.gov.br/downloads/101" target="_Blank"> Chamada Pública 003/2020 </a></p>
+                    </p>
 
 
                 </div>

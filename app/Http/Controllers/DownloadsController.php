@@ -252,7 +252,7 @@ class DownloadsController extends Controller
 
     public function home() {
 
-        $downloads = Downloads::all();
+        $downloads = Downloads::all()->sortByDesc("id");
 
         $downloadsPrimeira = Downloads::where('deleted_at', null)->first();
 
