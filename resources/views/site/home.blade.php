@@ -10,6 +10,22 @@
     <div class="container">
 
         
+<div class="row">
+    <div class="container">
+        <div class="col-sm-6">
+            <div class="alert alert-danger alert-dismissible text-center" role="alert">
+                    <h2><b>Concurso Público da Prefeitura de Sertânia-PE 2019</b></h2> 
+                    <p><small><a href="{!! route('downloads') !!}">Publicações na aba Download</a></small></p>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="alert alert-danger alert-dismissible text-center" role="alert">
+                    <a href="http://tenosoftsistemas.com.br/portal/v81/indexent/indexent.php?entidade=210&idoc=covid" target="_blank"><h2><b>Transparência COVID-19</b></h2> </a>
+            </div>
+        </div>
+    </div>
+
+</div>
 
         <div class="row">
             <!-- Slider -->
@@ -103,22 +119,6 @@
 
 
 
-<div class="row">
-    <div class="container">
-        <div class="col-sm-6">
-            <div class="alert alert-danger alert-dismissible text-center" role="alert">
-                    <h2><b>Concurso Público da Prefeitura de Sertânia-PE 2019</b></h2> 
-                    <p><small><a href="{!! route('downloads') !!}">Publicações na aba Download</a></small></p>
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="alert alert-danger alert-dismissible text-center" role="alert">
-                    <a href="http://tenosoftsistemas.com.br/portal/v81/indexent/indexent.php?entidade=210&idoc=covid" target="_blank"><h2><b>Transparência COVID-19</b></h2> </a>
-            </div>
-        </div>
-    </div>
-
-</div>
 
             <div class="row">
                 @foreach($publicidades as $campanha)
