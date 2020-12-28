@@ -9,18 +9,7 @@
 @section('content_index')
     <div class="container">
 
-        <div class="row">
-            <div class="container">
-               
-<div class="col-sm-12">
-    <a href={!! route('leiadir') !!}><img src="{!! asset('imagens/BANNER-EDITAIS-INCISO-II-E-III.jpg') !!}"></a>
-</div>
-
-               
-              
-                
-            </div>
-        </div>
+        
 
         <div class="row">
             <!-- Slider -->
