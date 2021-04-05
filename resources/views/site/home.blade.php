@@ -12,6 +12,11 @@
         
 <div class="row">
     <div class="container">
+        <div class="co-sm-12">
+            <a href="https://docs.google.com/forms/d/1li1LzAzw5V9OCK3iyFjwkGpC8oDMOfDZT97NPdOiZTU/viewform?edit_requested=true" target="_BLANK"><img src="{{asset('CADASTROPROGRAMADEREGIONALIZACAODOTURISMO.png')}}" alt="" class="img-responsive"></a>
+        </div>
+    </div>
+    <div class="container">
         <div class="col-sm-6">
             <div class="alert alert-danger alert-dismissible text-center" role="alert">
                     <h2><b>Concurso Público da Prefeitura de Sertânia-PE 2019</b></h2> 
