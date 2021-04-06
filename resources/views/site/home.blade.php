@@ -13,7 +13,7 @@
 <div class="row">
     <div class="container">
         <div class="co-sm-12">
-            <a href="https://docs.google.com/forms/d/1li1LzAzw5V9OCK3iyFjwkGpC8oDMOfDZT97NPdOiZTU/viewform?edit_requested=true" target="_BLANK"><img src="{{asset('CADASTROPROGRAMADEREGIONALIZACAODOTURISMO.png')}}" alt="" class="img-responsive"></a>
+            <a href="https://docs.google.com/forms/d/1li1LzAzw5V9OCK3iyFjwkGpC8oDMOfDZT97NPdOiZTU/viewform?edit_requested=true" target="_BLANK"><img src="{{asset('CADASTROPROGRAMADEREGIONALIZACAODOTURISMO.jpg')}}" alt="" class="img-responsive"></a>
         </div>
     </div>
     <div class="container">
