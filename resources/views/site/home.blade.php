@@ -14,7 +14,7 @@
     
     <div class="container" style="margin-bottom: 15px;">
             <div class="col-sm-12 text-center">
-                <a href="http://sertaniavacina.imunizape.com.br" target="_BLANK"><img src="{{asset('imagens/vacinacao.jpeg')}}" style="width: 100%" alt="" ></a>
+                <a href="http://sertaniavacina.imunizape.com.br" target="_BLANK"><img src="{{asset('imagens/bannervacinacao.png')}}" style="width: 100%" alt="" ></a>
             </div>
     </div>
     <div class="container">
