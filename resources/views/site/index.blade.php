@@ -52,7 +52,7 @@
                         <li><a href="https://transparencia.sertania.pe.gov.br" alt="Portal da Tranparência"  accesskey="1" target="_blank">Portal da Transparência</a></li>
                         <li><a href="https://www.tributosmunicipais.com.br/NFE-sertania/" alt="Nota Fiscal Eletrônica"  accesskey="2" target="_blank">Nota Fiscal Eletrônica</a></li>
                         <li><a href="http://gestor.tributosmunicipais.com.br/sertania/views/publico/portaldocontribuinte"  accesskey="3" 3alt="Portal do Contribuinte" target="_blank">Portal do Contribuinte</a></li>
-                        <li><a href="{{route('turismo')}}" accesskey="f2" alt="Turismo">Turismo</a></li>
+                        {{-- <li><a href="{{route('turismo')}}" accesskey="f2" alt="Turismo">Turismo</a></li> --}}
                         <li><a href="{{route('mapa-site')}}"  accesskey="4" alt="Mapa do Site">Mapa do Site</a></li>
                         <li><a href="http://www.sertania.pe.gov.br/webmail"  accesskey="5" alt="WebMail" target="_blank">WebMail</a></li>
                     </ul>
