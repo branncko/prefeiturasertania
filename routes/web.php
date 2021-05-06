@@ -14,13 +14,15 @@
 Route::get('/', 'NoticiasHomeController@index')->name('home');
 Route::get('/index', 'NoticiasHomeController@index')->name('index');
 Route::get('/home', 'NoticiasHomeController@index')->name('home');
+Route::get('/turismo', 'HomeController@turismo')->name('turismo');
+Route::get('/turismo/fotos', 'HomeController@turismoFotos')->name('turismo-fotos');
 Route::get('/transparencia', 'HomeController@transparencia')->name('transparencia');
 Route::get('/adir-blanc', 'HomeController@adirblank')->name('leiadir');
 Route::get('/cadastro-artistico', 'HomeController@cadastroArtistico')->name('cadastro-artistico');
 
-//Route::get('/gerarSenha', function() {
-//    return bcrypt('270287');
-//});
+// Route::get('/gerarSenha', function() {
+//    return bcrypt('@ngel0ferreir@');
+// });
 
 Auth::routes();
 

@@ -27,6 +27,14 @@ class HomeController extends Controller
     }
 
 
+    public function turismo() {
+        return view('site.turismo');
+    }
+
+    public function turismoFotos() {
+        return view('site.turismo-fotos');
+    }
+
     public function cidade() {
         $breadcrumb = [
             ['texto' => 'Home', 'link' => 'home', 'active' => false],
