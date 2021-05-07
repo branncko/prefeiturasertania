@@ -45,6 +45,12 @@
             <li><a href="#">Site Câmara de Vereadores</a></li>
             <li class="divider"></li>
             <li><a href="https://www.facebook.com/PrefeituradeSertaniaGovernoMunicipal/"><i class="fa fa-facebook"></i> Perfil do Facebook</a></li>
+            <li class="divider"></li>
+
+            <li ><div class="col-md-12">
+                <a href="{{asset('turismo')}}"><img src="{!! asset('imagens/VEMCONHECERSERTANIA.png') !!}" alt="Side Logo"   class="img-responsive" data-pin-nopin="true"></a>
+            </div>
+            </li>
         </ul>
     </div>
 </div>
