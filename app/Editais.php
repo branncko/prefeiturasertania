@@ -10,7 +10,7 @@ class Editais extends Model
     use SoftDeletes;
 
     protected $table = 'editais';
-    protected $fillable = ['title','arquivo','sobre','quantidade'];
+    protected $fillable = ['id','title','arquivo','sobre','quantidade'];
 
 
     protected $dates = ['deleted_at','created_at','updated_at'];

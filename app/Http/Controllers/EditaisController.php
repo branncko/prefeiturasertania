@@ -252,7 +252,7 @@ class EditaisController extends Controller
 
     public function home() {
 
-        $editais = Editais::all();
+        $editais = Editais::orderBy('id', 'desc')->get();
 
         $editaisPrimeira = Editais::where('deleted_at', null)->first();
 
