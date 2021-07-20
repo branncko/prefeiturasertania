@@ -33,7 +33,7 @@
             
             
 
-            <div class="col-md-6"><img src="{!! asset('imagens/logoturismo.png') !!}" alt="Side Logo" style="padding-top: 0px; max-height: 100px;" data-pin-nopin="true"></div>
+            <div class="col-md-6"><a href="{{route('turismo')}}"><img src="{!! asset('imagens/logoturismo.png') !!}" alt="Side Logo" style="padding-top: 0px; max-height: 100px;" data-pin-nopin="true"></a></div>
             <div class="col-md-6"><a href="{{route('home')}}"><img src="{!! asset('imagens/logoprefeiturabranca.png') !!}" alt="Site Logo" style="max-height: 100px" class="logo-brand  pull-right"></a></div>
             
 
