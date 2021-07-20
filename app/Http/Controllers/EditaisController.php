@@ -174,8 +174,9 @@ class EditaisController extends Controller
             if ($arquivo->isValid()) {
 
 //            $file->move($destinationPath,$file->getClientOriginalName());
-                $foto = $arquivo->store('arquivo');
-                $download->photo = $foto;
+                
+                $arqui = $arquivo->store('public/arquivos');
+                $download->arquivo = $arqui;
 
             } else {
                 return redirect()->back()->withErrors(["arquivo"=>"Não é uma foto válida"]);
