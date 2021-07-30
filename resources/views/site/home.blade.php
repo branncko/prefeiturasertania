@@ -20,8 +20,8 @@
     <div class="container">
         <div class="col-sm-6">
             <div class="alert alert-danger alert-dismissible text-center" role="alert">
-                    <h2><b>Concurso Público da Prefeitura de Sertânia-PE 2019</b></h2> 
-                    <p><small><a href="{!! route('downloads') !!}">Publicações na aba Download</a></small></p>
+                    <h2><b>Seleção Secretaria de Educação</b></h2> 
+                    <p><small><a href="https://docs.google.com/forms/d/e/1FAIpQLSfJFVU5rgU_snRle0CGHb8sZ3cONOLOqMh6YyIJ6MgWqqw55A/viewform?vc=0&c=0&w=1&flr=0&usp=mail_form_link" target="_blank">INSCRIÇÕES</a></small></p>
             </div>
         </div>
         <div class="col-sm-6">
