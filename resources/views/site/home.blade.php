@@ -25,8 +25,13 @@
             </div>
         </div>
         <div class="col-sm-6">
-            <div class="alert alert-danger alert-dismissible text-center" role="alert">
-                    <a href="http://transparencia.sertania.pe.gov.br/portal/v81/indexent/indexent.php?entidade=210&idoc=covid" target="_blank"><h2><b>Transparência COVID-19</b></h2> </a>
+            <div class="alert alert-danger alert-dismissible text-center" role="alert" style="font-size: 13px">
+                    <a href="http://transparencia.sertania.pe.gov.br/portal/v81/indexent/indexent.php?entidade=210&idoc=covid" target="_blank"><h4><b>Transparência COVID-19</b></h4> </a>
+            </div>
+            <div class="alert alert-danger alert-dismissible text-center" role="alert" style="font-size: 13px">
+                    <a href="https://bityli.com/DITtf" target="_blank"><h4><b>Conferência de Assistência Social</b></h4>
+                        <p style="margin: 0px;"><small>CREDENCIAMENTO</small></p>
+                    </a>
             </div>
         </div>
     </div>
